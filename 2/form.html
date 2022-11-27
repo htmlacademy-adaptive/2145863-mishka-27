@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.png">
+    <title>Мишка-шалунишка</title>
+    <base href="https://htmlacademy-adaptive.github.io/2145863-mishka-27/2/">
+</head>
+
+  <body class="page__body">
+    <!-- Шапка сайта -->
+    <header class="header">
+      <a class="main-nav__logo" href="index.html">
+        <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишка.">
+      </a>
+      <!-- Навигация -->
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          Открыть меню
+        </button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity=".2"
+                  d="m17.7 16.06-3.48-3.48a7.63 7.63 0 0 0 1.53-4.7c0-4.4-3.48-7.88-7.88-7.88A7.81 7.81 0 0 0 0 7.88c0 4.4 3.48 7.87 7.88 7.87 1.73 0 3.37-.61 4.7-1.53l3.48 3.47c.2.2.4.31.82.31.6 0 1.12-.51 1.12-1.13 0-.2-.1-.5-.3-.81ZM2.24 7.88a5.67 5.67 0 0 1 5.63-5.63 5.67 5.67 0 0 1 5.62 5.63 5.67 5.67 0 0 1-5.63 5.62 5.67 5.67 0 0 1-5.62-5.63Z"
+                  fill="#000" />
+              </svg>
+              Поиск по сайту
+            </a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">
+              <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity=".2"
+                  d="M20.19 6.86h-3.55L13.19.38c-.2-.38-.61-.48-1.02-.28-.4.19-.5.57-.3.95l3.14 5.8H5.78l3.15-5.8c.2-.38 0-.76-.3-.95A.82.82 0 0 0 7.6.38L4.16 6.86H.8c-.4 0-.81.28-.81.76 0 .38.3.76.81.76h.2l.92 2.86c-.2.1-.3.28-.3.57 0 .38.3.67.7.67L4.06 18h12.88l1.73-5.52c.4 0 .7-.29.7-.67 0-.2-.1-.48-.3-.57L20 8.38h.2c.4 0 .81-.28.81-.76s-.4-.76-.81-.76Zm-4.57 9.62H5.07l-1.21-4.1h13.08l-1.32 4.1Zm1.63-5.53H3.35L2.54 8.3h15.52l-.81 2.66Z"
+                  fill="#000" />
+              </svg>
+              Корзина: пока пуста
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Основная часть -->
+    <main class="main-inner">
+      <h1 class="main-inner__title">Вязание на заказ</h1>
+      <div class="main-container order">
+
+        <p class="order__introduction">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить
+          детали.
+        </p>
+
+        <!-- Форма заказа -->
+        <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
+
+          <!-- Тип -->
+          <fieldset class="control-group">
+            <legend>Тип</legend>
+            <label class="control">
+              <input type="radio" name="type" value="accessory" checked>
+              Аксессуар для интерьера
+            </label>
+            <label class="control">
+              <input type="radio" name="type" value="toy">
+              Детская игрушка
+            </label>
+          </fieldset>
+
+          <!-- Цвет -->
+          <fieldset class="control-group">
+            <legend>Цвет</legend>
+            <label class="control">
+              <input type="checkbox" name="white" checked>
+              Белый
+            </label>
+            <label class="control">
+              <input type="checkbox" name="grey" checked>
+              Серый
+            </label>
+            <label class="control">
+              <input type="checkbox" name="tiffany">
+              Тиффани
+            </label>
+            <label class="control">
+              <input type="checkbox" name="black">
+              Черный
+            </label>
+            <label class="control">
+              <input type="checkbox" name="pink">
+              Розовый
+            </label>
+            <label class="control">
+              <input type="checkbox" name="orange">
+              Оранжевый
+            </label>
+          </fieldset>
+
+          <!-- ФИО -->
+          <fieldset class="control-group">
+            <legend>ФИО</legend>
+            <label class="control--fullname">
+              Имя:
+              <input type="text" name="name" placeholder="Введите ваше имя*">
+            </label>
+            <label class="control--fullname">
+              Фамилия:
+              <input type="text" name="surname" placeholder="Укажите фамилию*">
+            </label>
+            <label class="control--fullname">
+              Отчество:
+              <input type="text" name="patronymic" placeholder="Отчество, если желаете">
+            </label>
+          </fieldset>
+
+          <!-- тел -->
+          <fieldset class="control-group">
+            <legend>тел</legend>
+            <input class="control--phone" type="text" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+          </fieldset>
+
+          <!-- E-mail -->
+          <fieldset class="control-group">
+            <legend>тел</legend>
+            <input class="control--email" type="text" name="email" placeholder="Ваш Email*">
+          </fieldset>
+
+          <!-- Дополнительное -->
+          <fieldset class="control-group">
+            <legend>Доп</legend>
+            <textarea class="control" name="text" placeholder="Опишите все ваши пожелания к заказу">
+            </textarea>
+          </fieldset>
+
+          <!-- Сноска -->
+          <p class="order__legend">
+            <small>*Поля обязательны для заполнения</small>
+          </p>
+
+          <button class="order__submit button" type="submit">Отпаравить заказ</button>
+
+        </form>
+
+      </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+
+      <!-- соцсети -->
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Мы в YouTube</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Мы в Телеграм</span>
+          </a>
+        </li>
+      </ul>
+      <!-- разработка -->
+      <div class="copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/">
+          Разработано
+          <span class="copyright__icon"></span>
+        </a>
+      </div>
+
+    </footer>
+  </body>
+</html>
