@@ -123,23 +123,19 @@
             </label>
           </fieldset>
 
-          <!-- тел -->
-          <fieldset class="control-group">
-            <legend>тел</legend>
-            <input class="control--phone" type="text" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-          </fieldset>
+          <fieldset class="control-group--hidden">
+            <legend class="visually-hidden">Контакты и пожелания</legend>
 
-          <!-- E-mail -->
-          <fieldset class="control-group">
-            <legend>E-mail</legend>
-            <input class="control--email" type="text" name="email" placeholder="Ваш Email*" required>
-          </fieldset>
+            <label for="form-phone">тел</label>
+            <input class="control--phone" type="text" id="form-phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
 
-          <!-- Дополнительное -->
-          <fieldset class="control-group">
-            <legend>Доп</legend>
-            <textarea class="control" name="text" placeholder="Опишите все ваши пожелания к заказу">
+            <label for="form-email">E-mail</label>
+            <input class="control--email" type="text" id="form-email" name="email" placeholder="Ваш Email*" required>
+
+            <label for="form-text">Доп</label>
+            <textarea class="control" id="form-text" name="text" placeholder="Опишите все ваши пожелания к заказу">
             </textarea>
+
           </fieldset>
 
           <!-- Сноска -->
