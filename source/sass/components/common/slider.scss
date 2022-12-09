@@ -1,0 +1,37 @@
+@use "../../global/bootstrap.scss" as *;
+
+.slider__list {
+  @include list-reset;
+}
+
+.slider__item--hide {
+  display: none;
+}
+
+.slider__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 52px;
+  margin-bottom: 38px;
+}
+
+.slider__button {
+  border: 1px solid $btn-slider-border;
+  cursor: pointer;
+  background: url("../img/huge-arrow-left.svg") no-repeat 47% 49%;
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.slider__button--next {
+  transform: scaleX(-1);
+  background-position: 52% 49%;
+  border-left: none;
+}

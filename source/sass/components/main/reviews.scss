@@ -1,0 +1,43 @@
+@use "../../global/bootstrap.scss" as *;
+
+.reviews {
+  padding: 0 $m-padding 51px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: url("../img/zigzag-line-desktop.svg");
+  }
+}
+
+.reviews__title {
+  margin-bottom: 14px;
+}
+
+.reviews__container {
+  margin: 0 0 27px;
+}
+
+.reviews__text {
+  line-height: 30px;
+  margin: 0 0 33px;
+}
+
+.reviews__author {
+  font-size: 17px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.reviews__link {
+  font-size: 17px;
+  line-height: 35px;
+  font-style: normal;
+  text-decoration: none;
+  color: $text-color;
+}

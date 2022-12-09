@@ -1,0 +1,93 @@
+@use "../../global/bootstrap.scss" as *;
+
+.products {
+  @include list-reset;
+  padding: $m-padding;
+}
+
+.products__item {
+  padding-bottom: 24px;
+  margin-bottom: 31px;
+  border: 1px solid $stroke-color;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba($color, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba($color, 0.1);
+  }
+}
+
+.products__link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: $color;
+}
+
+.products__image {
+  width: calc(100% + 2px);
+  margin-bottom: 28px;
+
+  &--long {
+    margin-bottom: 25px;
+  }
+}
+
+.products__title {
+  font-size: 17px;
+  line-height: 24px;
+  padding-left: 28px;
+  margin: 0 0 6px;
+
+  &--long {
+    margin-bottom: 10px;
+  }
+}
+
+.products__link:hover .products__title {
+  opacity: 0.6;
+}
+
+.products__link:active .products__title {
+  opacity: 0.3;
+}
+
+.products__desc {
+  margin: 0 0 18px;
+  font-size: 13px;
+  line-height: 30px;
+  padding-left: 28px;
+}
+
+.product__footer {
+  display: flex;
+  margin: 0 28px;
+  border-top: 1px solid $stroke-color;
+}
+
+.products__price {
+  color: $color;
+  font-weight: 700;
+  padding-top: 22px;
+}
+
+.products__buy {
+  padding-top: 22px;
+  padding-left: 25px;
+  margin-left: auto;
+  color: rgba($color, 0.2);
+
+  &:hover {
+    color: $brand-color;
+  }
+
+  &:active {
+    color: rgba($brand-color, 0.3);
+  }
+}

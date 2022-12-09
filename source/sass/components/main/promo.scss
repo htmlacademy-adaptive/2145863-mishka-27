@@ -1,0 +1,53 @@
+@use "../../global/bootstrap.scss" as *;
+
+.promo {
+  padding: 32px $m-padding 42px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.promo__title {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $brand-color;
+  text-transform: uppercase;
+  margin: 0 0 17px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: url("../img/zigzag-line-desktop.svg");
+  }
+}
+
+.promo__subtitle {
+  order: -1;
+  margin: 0 0 4px;
+}
+
+.promo__desc {
+  margin: 0 0 21px;
+}
+
+.promo__list {
+  margin: 0 0 28px;
+}
+
+.promo__img {
+  margin: 0 0 26px;
+  width: 100%;
+}
+
+
+.promo__price {
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 24.5px;
+}

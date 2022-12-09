@@ -1,0 +1,21 @@
+@use "../../global/bootstrap.scss" as *;
+
+.site-list {
+  @include list-reset;
+}
+
+.site-list__link {
+  display: block;
+  padding: 29px 0 26px;
+  padding-left: 76px;
+  text-decoration: none;
+  color: $color;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

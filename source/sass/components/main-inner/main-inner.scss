@@ -1,0 +1,17 @@
+@use "../../global/bootstrap.scss" as *;
+
+.main-inner__title {
+  min-height: 176px;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 0;
+  padding: 73px 30px 75px 37px;
+  color: $color;
+  background-color: $accent-bg-color;
+  text-align: center;
+
+  &--catalog {
+    padding-left: 28px;
+  }
+}

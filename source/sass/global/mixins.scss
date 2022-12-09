@@ -1,0 +1,42 @@
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin layout-red {
+  outline: 1px dotted #ff0000;
+}
+
+@mixin layout-green {
+  outline: 1px dotted #00ff00;
+}
+
+@mixin layout-blue {
+  outline: 1px dotted #0000ff;
+}
+
+@mixin layout-bg-red {
+  background-color: rgba(#ff0000, 0.7);
+}
+
+@mixin layout-bg-green {
+  background-color: rgba(#00ff00, 0.5);
+}
+
+@mixin layout-bg-blue {
+  background-color: rgba(#0000ff, 0.7);
+}

@@ -1,0 +1,12 @@
+@use "../../global/bootstrap.scss" as *;
+
+.footer {
+  // display: flex;
+  // flex-direction: column;
+  display: grid;
+  // grid-template-rows: minmax(80px, 1fr) minmax(80px, 1fr);
+  grid-template-rows: minmax(80px, 1fr);
+  background-color: $footer-bg-color;
+  // padding: 25px $m-padding 22px;
+  padding: 0 $m-padding;
+}

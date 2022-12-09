@@ -1,0 +1,25 @@
+@use "../../global/bootstrap.scss" as *;
+
+.properties {
+  // display: grid;
+  // grid-template-columns: 97px 1fr;
+  margin: 0;
+  line-height: 20px;
+}
+
+.properties__item {
+  display: flex;
+  padding: 10px;
+  padding-top: 8px;
+  padding-bottom: 11px;
+  padding-left: 0;
+  border-bottom: 1px solid $stroke-color;
+}
+
+.properties__name {
+  width: 97px;
+}
+
+.properties__value {
+  margin: 0;
+}

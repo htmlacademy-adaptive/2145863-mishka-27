@@ -1,0 +1,28 @@
+@use "../../global/bootstrap.scss" as *;
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+  min-height: 77px;
+}
+
+.copyright__text {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.copyright__link {
+  color: $primary-color;
+  transform: translateY(5px);
+
+  &:hover {
+    color: $primary-hover-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

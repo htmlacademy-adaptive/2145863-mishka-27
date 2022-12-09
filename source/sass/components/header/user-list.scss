@@ -1,0 +1,36 @@
+@use "../../global/bootstrap.scss" as *;
+
+.user-list {
+  @include list-reset;
+}
+
+.user-list__link {
+  position: relative;
+  display: flex;
+  padding: 28px $m-padding 28px 76px;
+  text-decoration: none;
+  color: $color;
+}
+
+.user-list__icon {
+  position: absolute;
+  left: 31px;
+  top: 31px;
+  color: rgba($color, 0.2);
+}
+
+.user-list__link:hover .user-list__icon {
+  color: $brand-color;
+}
+
+.user-list__link:hover .user-list__link-text {
+  opacity: 0.6;
+}
+
+.user-list__link:active .user-list__icon {
+  opacity: 0.3;
+}
+
+.user-list__link:active .user-list__link-text {
+  opacity: 0.3;
+}

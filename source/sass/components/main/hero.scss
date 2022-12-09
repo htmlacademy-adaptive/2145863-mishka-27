@@ -1,0 +1,19 @@
+@use "../../global/bootstrap.scss" as *;
+
+.hero {
+  background: url("../img/hero-mobile.jpg") no-repeat center -18px;
+  background-color: $hero-bg-color;
+  background-size: 568px 373px;
+}
+
+.hero__tagline {
+  display: block;
+  padding: 73px $m-padding 0;
+  min-height: 283px;
+  margin: 0 auto;
+  color: $color;
+  text-align: center;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+}
