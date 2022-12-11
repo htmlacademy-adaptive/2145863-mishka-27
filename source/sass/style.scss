@@ -1,10 +1,10 @@
 // Файл с часто используемыми элементами
 @use "./global/bootstrap.scss" as *;
 
-// Базовые блоки
-// @use "./components/visually-hidden.scss";
-
 // Блоки
+
+// Базовые блоки
+@use "./components/visually-hidden.scss";
 
 // Общие
 @use "./components/common/page.scss";
@@ -37,20 +37,3 @@
 // Блоки подвала
 @use "./components/common/footer.scss";
 @use "./components/common/copyright.scss";
-
-// глобальные стили
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.visually-hidden {
-  @include visually-hidden;
-}
