@@ -1,0 +1,23 @@
+@use "../../global/bootstrap.scss" as *;
+
+.social {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding: 15px;
+  gap: 1px;
+}
+
+.social__link {
+  padding: 15px 14px;
+  color: $social-icon-color;
+
+  &:hover {
+    color: $social-icon-hover-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

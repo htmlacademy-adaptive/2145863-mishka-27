@@ -1,0 +1,59 @@
+@use "../../global/bootstrap.scss" as *;
+
+.categories__list {
+  @include list-reset;
+}
+
+.categories__item {
+  position: relative;
+  display: grid;
+  min-height: 103px;
+}
+
+.categories__item--left {
+  background-color: $left-category-btn;
+}
+
+.categories__item--right {
+  background-color: $right-category-btn;
+}
+
+.categories__link {
+  position: relative;
+  font-size: 19px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 24px 160px 31px $m-padding;
+  color: $category-btn-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    opacity: 0.5;
+  }
+
+  &--left::after {
+    width: 40px;
+    height: 62px;
+    background: url("../img/icons/interior.svg");
+    top: 24px;
+    right: 36px;
+  }
+
+  &--right::after {
+    width: 60px;
+    height: 60px;
+    background: url("../img/icons/toy-svg.svg");
+    top: 21px;
+    right: 27px;
+  }
+
+  &:hover::after {
+    opacity: 0.7;
+    transform: translateY(-5px);
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}

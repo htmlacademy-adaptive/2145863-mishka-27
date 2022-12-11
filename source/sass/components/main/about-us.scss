@@ -1,0 +1,53 @@
+@use "../../global/bootstrap.scss" as *;
+
+.about-us {
+  padding: 31px 30px 28px;
+}
+
+.about-us__list {
+  @include list-reset;
+}
+
+.about-us__item {
+  padding-top: 56px;
+  margin-bottom: 27px;
+  position: relative;
+
+  &--eco {
+    background: url("../img/icons/icon-1.svg") no-repeat 8px top;
+  }
+
+  &--price {
+    background: url("../img/icons/icon-3.svg") no-repeat 0 top;
+  }
+
+  &--likes {
+    background: url("../img/icons/icon-5.svg") no-repeat 7px 5px;
+  }
+
+  &--handmade {
+    background: url("../img/icons/icon-2.svg") no-repeat 3px 2px;
+  }
+
+  &--national::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: -6px;
+    width: 55px;
+    height: 23px;
+    background: url("../img/icons/icon-4.svg") no-repeat;
+  }
+
+  &--package {
+    background: url("../img/icons/icon-6.svg") no-repeat 3px 2px;
+  }
+}
+
+.about-us__text {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 1.27px;
+  margin: 0;
+}

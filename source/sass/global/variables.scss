@@ -1,0 +1,44 @@
+// Цвета
+$color: #000000;
+$text-color: #444444;
+$accent-bg-color: #f1f1f1;
+$bg-color: #ffffff;
+$brand-color: #63d1bb;
+$left-category-btn: $brand-color;
+$right-category-btn: #56c3b2;
+$category-btn-color: $bg-color;
+$stroke-color: #ececec;
+$hero-bg-color: #f9f9f9;
+$footer-bg-color: $accent-bg-color;
+$social-icon-color: #231f20;
+$social-icon-hover-color: #46c1ae;
+$primary-color: #63d1bb;
+$primary-hover-color: #46c1ae;
+$form-group-border-color: #62d1ba;
+$icon-hover: $form-group-border-color;
+$form-check-mark: $form-group-border-color;
+$form-legend-color: #63d1bb;
+// Цвета кнопок
+$btn-color: $text-color;
+$btn-background: trasparent;
+$btn-hover-color: #ffffff;
+$btn-hover-background: $btn-color;
+$btn-active-color: rgba(#ffffff, 0.3);
+$btn-active-background: $btn-hover-background;
+$btn-slider-border: #ececec;
+
+// Основноые размеры
+$m-width: 320px;
+$t-width: 768px;
+$d-width: 1150px;
+
+$m-padding: 30px;
+$t-padding: 50px;
+$d-padding: $t-padding;
+
+$m-modal-width: 320px;
+
+// Высота шапки
+$m-header-height: 79px;
+$t-header-height: 89px;
+$d-header-height: $t-header-height;

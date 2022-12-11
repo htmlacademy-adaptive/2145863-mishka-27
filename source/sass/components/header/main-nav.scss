@@ -1,0 +1,68 @@
+@use "../../global/bootstrap.scss" as *;
+
+.main-nav {
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: $m-header-height;
+  grid-template-areas: "top";
+  font-size: 17px;
+  font-weight: 700;
+  left: 0;
+  right: 0;
+  min-width: $m-width;
+}
+
+.main-nav__logo {
+  place-self: center;
+  display: flex;
+  grid-area: top;
+  padding: 21px 5px 22px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__toggle {
+  box-sizing: content-box;
+  grid-area: top;
+  justify-self: end;
+  align-self: center;
+  width: 20px;
+  height: 14px;
+  background: url("../img/menu-close.svg") no-repeat center;
+  border: none;
+  padding: 5px 2px;
+  margin-right: $m-padding;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav--hide .main-nav__toggle {
+  background: url("../img/menu.svg") no-repeat center;
+}
+
+.main-nav__list {
+  background-color: $bg-color;
+  z-index: 1;
+}
+
+.main-nav__item {
+  // border-top: 1px solid;
+  box-shadow: inset 0 0 0 1px $stroke-color;
+}
+
+.main-nav--hide .main-nav__list {
+  display: none;
+}

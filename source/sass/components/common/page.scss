@@ -1,0 +1,13 @@
+@use "../../global/bootstrap.scss" as *;
+
+.page__body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: $text-color;
+  background-color: $bg-color;
+  margin: 0;
+  min-width: $m-width;
+}

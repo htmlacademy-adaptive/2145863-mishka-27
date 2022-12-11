@@ -1,1 +1,56 @@
-// Начните писать стили здесь
+// Файл с часто используемыми элементами
+@use "./global/bootstrap.scss" as *;
+
+// Базовые блоки
+// @use "./components/visually-hidden.scss";
+
+// Блоки
+
+// Общие
+@use "./components/common/page.scss";
+@use "./components/common/section-title.scss";
+@use "./components/common/properties.scss";
+@use "./components/common/button.scss";
+@use "./components/common/slider.scss";
+@use "./components/common/social.scss";
+@use "./components/common/modal-container.scss";
+@use "./components/common/modal.scss";
+
+// Блоки шапки
+@use "./components/header/header.scss";
+@use "./components/header/main-nav.scss";
+@use "./components/header/site-list.scss";
+@use "./components/header/user-list.scss";
+// Блоки главной
+@use "./components/main/hero.scss";
+@use "./components/main/categories.scss";
+@use "./components/main/promo.scss";
+@use "./components/main/about-us.scss";
+@use "./components/main/reviews.scss";
+@use "./components/main/contacts.scss";
+// Блоки главной-внутренней
+@use "./components/main-inner/main-inner.scss";
+@use "./components/main-inner/order.scss";
+@use "./components/main-inner/form.scss";
+@use "./components/main-inner/products.scss";
+@use "./components/main-inner/promo-clip.scss";
+// Блоки подвала
+@use "./components/common/footer.scss";
+@use "./components/common/copyright.scss";
+
+// глобальные стили
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
