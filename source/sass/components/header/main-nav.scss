@@ -7,6 +7,7 @@
   font-size: 17px;
   font-weight: 700;
   min-width: $m-width;
+  --bg-navigation: #f9f9f9;
 
   @media (min-width: $t-width) {
     grid-template-columns: 209px 1fr 309px;
@@ -24,12 +25,17 @@
   }
 }
 
+.main-nav.main-nav--inner {
+  --bg-navigation: #f1f1f1;
+}
+
 .main-nav__logo {
   z-index: 2;
   place-self: center;
   display: flex;
   grid-area: top;
   padding: 21px 5px 22px;
+  transform: translateY(4px);
 
   &:hover {
     opacity: 0.6;
@@ -42,7 +48,7 @@
   @media (min-width: $t-width) {
     grid-area: logo;
     padding: 0;
-    transform: translateY(5px);
+    transform: translateY(3px);
   }
 
   @media (min-width: $d-width) {

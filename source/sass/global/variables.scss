@@ -3,7 +3,7 @@ $color: #000000;
 $text-color: #444444;
 $accent-bg-color: #f1f1f1;
 $bg-color: #ffffff;
-$bg-hero: #f9f9f9;
+$bg-hero: var(--bg-navigation);
 $brand-color: #63d1bb;
 $left-category-btn: $brand-color;
 $right-category-btn: #56c3b2;
