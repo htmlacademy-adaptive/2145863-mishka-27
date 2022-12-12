@@ -1,19 +1,31 @@
 @use "../../global/bootstrap.scss" as *;
 
 .main-nav {
-  position: absolute;
-  z-index: 1;
   display: grid;
   grid-template-rows: $m-header-height;
   grid-template-areas: "top";
   font-size: 17px;
   font-weight: 700;
-  left: 0;
-  right: 0;
   min-width: $m-width;
+
+  @media (min-width: $t-width) {
+    grid-template-columns: 209px 1fr 309px;
+    grid-template-rows: minmax($t-header-height, auto);
+    grid-template-areas:
+      "logo . ."
+      ". . delivery";
+  }
+
+  @media (min-width: $d-width) {
+    grid-template-columns: 1fr 189px 1fr;
+    grid-template-areas:
+      "site-list logo user-list"
+      ".         .    delivery";
+  }
 }
 
 .main-nav__logo {
+  z-index: 2;
   place-self: center;
   display: flex;
   grid-area: top;
@@ -25,6 +37,28 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $t-width) {
+    grid-area: logo;
+    padding: 0;
+    transform: translateY(5px);
+  }
+
+  @media (min-width: $d-width) {
+    transform: translateY(3px);
+  }
+}
+
+.main-nav__logo-img {
+  @media (min-width: $t-width) {
+    width: 113px;
+    height: 46px;
+  }
+
+  @media (min-width: $d-width) {
+    width: 149px;
+    height: 72px;
   }
 }
 
@@ -39,6 +73,7 @@
   border: none;
   padding: 5px 2px;
   margin-right: $m-padding;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.6;
@@ -47,6 +82,10 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $t-width) {
+    display: none;
+  }
 }
 
 .main-nav--hide .main-nav__toggle {
@@ -54,15 +93,46 @@
 }
 
 .main-nav__list {
+  @include list-reset;
   background-color: $bg-color;
   z-index: 1;
 }
 
 .main-nav__item {
-  // border-top: 1px solid;
   box-shadow: inset 0 0 0 1px $stroke-color;
+
+  @media (min-width: $t-width) {
+    box-shadow: none;
+  }
 }
 
-.main-nav--hide .main-nav__list {
-  display: none;
+.main-nav__delivery {
+  grid-area: delivery;
+  z-index: 2;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: right;
+  padding-right: $t-padding;
+  padding-top: 20px;
+  color: $text-color;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (max-width: $t-width) {
+    display: none;
+  }
+}
+
+// скрывает меню в нормальном состоянии на мобильном
+@media (max-width: $t-width) {
+  .main-nav--hide .main-nav__list {
+    display: none;
+  }
 }

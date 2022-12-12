@@ -1,7 +1,29 @@
 @use "../../global/bootstrap.scss" as *;
 
 .user-list {
-  @include list-reset;
+  @media (min-width: $t-width) {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-content: end;
+    padding-left: 209px;
+    padding-right: 50px;
+    border-bottom: 1px solid rgba($color, 0.1);
+  }
+
+  @media (min-width: $d-width) {
+    padding-left: 0;
+    padding-right: 52px;
+    grid-area: user-list;
+    border-bottom: 0;
+  }
+}
+
+.user-list__item {
+  @media (min-width: $t-width) {
+    border-left: 1px solid rgba($color, 0.1);
+  }
 }
 
 .user-list__link {
@@ -10,6 +32,17 @@
   padding: 28px $m-padding 28px 76px;
   text-decoration: none;
   color: $color;
+
+  @media (min-width: $t-width) {
+    padding: 33px 0 32px 83px;
+    min-height: 89px;
+  }
+}
+
+.user-list__text--only-mobile {
+  @media (min-width: $t-width) {
+    display: none;
+  }
 }
 
 .user-list__icon {
@@ -17,6 +50,10 @@
   left: 31px;
   top: 31px;
   color: rgba($color, 0.2);
+
+  @media (min-width: $t-width) {
+    top: 35px;
+  }
 }
 
 .user-list__link:hover .user-list__icon {

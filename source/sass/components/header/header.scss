@@ -2,4 +2,12 @@
 
 .header {
   height: $m-header-height;
+  // TODO без js
+  // min-height: $m-header-height;
+
+  @media (min-width: $t-width) {
+    // min-height: $t-header-height;
+    height: auto;
+  }
 }
+

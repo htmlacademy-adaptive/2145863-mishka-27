@@ -1,0 +1,30 @@
+@use "../../global/bootstrap.scss" as *;
+
+.extra-list {
+  @media (max-width: $d-width) {
+    display: none;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  background-color: $bg-hero;
+  font-size: 15px;
+  padding: 0 310px 0 51px;
+}
+
+.extra-list__link {
+  display: flex;
+  text-decoration: none;
+  padding: 19px 62px 19px 0;
+  color: $color;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

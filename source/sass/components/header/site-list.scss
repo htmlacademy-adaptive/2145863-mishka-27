@@ -1,7 +1,33 @@
 @use "../../global/bootstrap.scss" as *;
 
 .site-list {
-  @include list-reset;
+  @media (min-width: $t-width) {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    font-size: 15px;
+    background-color: $bg-hero;
+    padding: 0 260px 0 $t-padding;
+  }
+
+  @media (min-width: $d-width) {
+    grid-area: site-list;
+    padding: 0;
+    padding-left: $d-padding - 36px;
+    font-size: 17px;
+    background-color: transparent;
+  }
+}
+
+.site-list__item {
+  @media (min-width: $d-width) {
+    border-left: 1px solid rgba($color, 0.1);
+  }
+
+  &--no-border {
+    border: none;
+  }
 }
 
 .site-list__link {
@@ -17,5 +43,13 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $t-width) {
+    padding: 21px 36px 21px 0;
+  }
+
+  @media (min-width: $d-width) {
+    padding: 33px 35px 32px 36px;
   }
 }
