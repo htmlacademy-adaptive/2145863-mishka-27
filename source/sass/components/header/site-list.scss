@@ -12,7 +12,9 @@
   }
 
   @media (min-width: $d-width) {
+    position: relative;
     grid-area: site-list;
+    align-content: flex-start;
     padding: 0;
     padding-left: $d-padding - 36px;
     font-size: 17px;

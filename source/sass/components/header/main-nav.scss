@@ -18,10 +18,11 @@
   }
 
   @media (min-width: $d-width) {
-    grid-template-columns: 1fr 189px 1fr;
+    grid-template-columns: 1fr 480px 188px 480px 1fr;
     grid-template-areas:
-      "site-list logo user-list"
-      ".         .    delivery";
+      ". site-list logo user-list ."
+      ". .        .     delivery  .";
+    background-color: $bg-hero;
   }
 }
 
@@ -29,12 +30,33 @@
   --bg-navigation: #f1f1f1;
 }
 
+.main-nav__logo-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: top;
+
+  @media (min-width: $t-width) {
+    grid-area: logo;
+  }
+
+  @media (min-width: $d-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: -1/1;
+    grid-row: 1/2;
+    background-color: $bg-color;
+    border-bottom: 1px solid $stroke-color;
+  }
+}
+
 .main-nav__logo {
   z-index: 2;
   place-self: center;
   display: flex;
-  grid-area: top;
-  padding: 21px 5px 22px;
+  padding: 5px;
   transform: translateY(4px);
 
   &:hover {
@@ -46,7 +68,6 @@
   }
 
   @media (min-width: $t-width) {
-    grid-area: logo;
     padding: 0;
     transform: translateY(3px);
   }
@@ -102,6 +123,10 @@
   @include list-reset;
   background-color: $bg-color;
   z-index: 1;
+
+  @media (min-width: $t-width) {
+    background-color: transparent;
+  }
 }
 
 .main-nav__item {

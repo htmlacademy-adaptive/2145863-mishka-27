@@ -1,9 +1,37 @@
 @use "../../global/bootstrap.scss" as *;
 
 .hero {
+  position: relative;
   background: url("../img/hero-mobile.jpg") no-repeat center -18px;
   background-color: $hero-bg-color;
   background-size: 568px 373px;
+
+  @media (min-width: $t-width) {
+    min-height: 621px;
+    background: url("../img/hero-tablet.jpg") no-repeat center -67px;
+    background-color: $hero-bg-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 24px;
+      background: url("../img/zigzag-fill-tablet.svg") repeat-x bottom;
+    }
+  }
+
+  @media (min-width: $d-width) {
+    background: url("../img/hero-desktop.jpg") no-repeat center -64px;
+    background-color: $hero-bg-color;
+
+    &::after {
+      bottom: -7px;
+      height: 37px;
+      background: url("../img/zigzag-fill-desktop.svg") repeat-x center;
+      background-size: 1250px 37px;
+    }
+  }
 }
 
 .hero__tagline {
@@ -16,4 +44,16 @@
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
+
+  @media (min-width: $t-width) {
+    font-size: 43px;
+    line-height: 50px;
+    padding: 89px $t-padding 371px;
+  }
+
+  @media (min-width: $d-width) {
+    font-size: 53px;
+    line-height: 57px;
+    padding: 95px $t-padding 355px;
+  }
 }
