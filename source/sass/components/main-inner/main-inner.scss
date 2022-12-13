@@ -1,6 +1,7 @@
 @use "../../global/bootstrap.scss" as *;
 
 .main-inner__title {
+  position: relative;
   min-height: 176px;
   font-size: 27px;
   font-weight: 700;
@@ -11,7 +12,44 @@
   background-color: $accent-bg-color;
   text-align: center;
 
+  @media (min-width: $t-width) {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 35px;
+    padding-left: 28px;
+    min-height: 171px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 24px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      background: url(../img/zigzag-fill-desktop.svg) repeat-x;
+      background-size: 770px 24px;
+      background-position: left -1px bottom -1px;
+    }
+  }
+
+  @media (min-width: $d-width) {
+    font-size: 53px;
+    line-height: 57px;
+    padding-top: 39px;
+    padding-left: 32px;
+    min-height: 208px;
+
+    &::after {
+      height: 34px;
+      background-size: 1150px 34px;
+    }
+  }
+
   &--catalog {
     padding-left: 28px;
+
+    @media (min-width: $d-width) {
+      padding-left: 33px;
+    }
   }
 }

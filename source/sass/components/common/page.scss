@@ -11,7 +11,7 @@
   margin: 0;
   min-width: $m-width;
 
-  // отладочная ширина
-  // max-width: $t-width;
-  max-width: $d-width;
+  // отладочные ширины (для PP)
+  // max-width: $t-width;   // фиксированный планшет
+  // max-width: $d-width;      // фиксированынй десктоп
 }
