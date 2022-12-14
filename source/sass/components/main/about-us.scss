@@ -5,6 +5,11 @@
   font-size: 15px;
   font-weight: 700;
   line-height: 20px;
+
+  @media (min-width: $d-width) {
+    padding: 68px 0 28px;
+    margin-bottom: 7px;
+  }
 }
 
 .about-us__title {
@@ -12,6 +17,11 @@
     width: $t-container;
     margin: 0 auto;
     margin-bottom: 43px;
+  }
+
+  @media (min-width: $d-width) {
+    width: 700px;
+    margin-bottom: 41px;
   }
 }
 
@@ -23,6 +33,10 @@
     grid-template-columns: 1fr 1fr;
     width: 668px;
     margin: 0 auto;
+  }
+
+  @media (min-width: $d-width) {
+    width: 700px;
   }
 }
 
@@ -55,6 +69,10 @@
 
   &--likes {
     background: url("../img/icons/icon-5.svg") no-repeat 7px 5px;
+
+    @media (min-width: $d-width) {
+      background-position-y: 7px;
+    }
   }
 
   &--handmade {
