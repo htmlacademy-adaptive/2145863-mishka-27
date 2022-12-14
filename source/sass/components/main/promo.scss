@@ -17,6 +17,7 @@
     padding: 40px $t-padding 68px;
     font-size: 17px;
     line-height: 30px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: $d-width) {
@@ -118,6 +119,10 @@
   @media (min-width: $t-width) {
     letter-spacing: -1.4px;
   }
+
+  @media (min-width: $d-width) {
+    letter-spacing: 0;
+  }
 }
 
 .promo__img {
@@ -128,6 +133,10 @@
     grid-area: image;
     margin: 0;
     margin-top: 12px;
+  }
+
+  @media (min-width: $d-width) {
+    margin: 0;
   }
 }
 
