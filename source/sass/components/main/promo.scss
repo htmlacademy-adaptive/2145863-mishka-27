@@ -11,9 +11,10 @@
     grid-template-columns: 1fr 334px;
     grid-template-areas:
       "top    top"
-      "desc   image";
+      "desc   image"
+      "footer   image";
     column-gap: 42px;
-    padding: 39px $t-padding 68px;
+    padding: 40px $t-padding 68px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -83,7 +84,7 @@
 
   @media (min-width: $t-width) {
     grid-area: top;
-    margin-bottom: 39px;
+    margin-bottom: 38px;
   }
 
   @media (min-width: $d-width) {
@@ -126,7 +127,7 @@
   @media (min-width: $t-width) {
     grid-area: image;
     margin: 0;
-    // margin-top: 12px;
+    margin-top: 12px;
   }
 }
 
@@ -147,7 +148,7 @@
     font-size: 20px;
     line-height: 24px;
     transform: translate(-2px);
-    margin: 31px;
+    margin: 0 0 33px;
   }
 }
 
