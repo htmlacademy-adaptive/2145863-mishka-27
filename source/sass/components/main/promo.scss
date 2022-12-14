@@ -5,6 +5,32 @@
   display: flex;
   flex-direction: column;
   position: relative;
+
+  @media (min-width: $t-width) {
+    display: grid;
+    grid-template-columns: 1fr 334px;
+    grid-template-areas:
+      "top    top"
+      "desc   image";
+    column-gap: 42px;
+    padding: 39px $t-padding 68px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $d-width) {
+    grid-template-columns: 175px 292px 58px 525px;
+    grid-template-rows: 121px 1fr;
+    grid-template-areas:
+      "title  sub-title . image"
+      ".      desc      . image"
+      ".      footer    . image";
+    gap: 0;
+    padding: 0;
+    padding-bottom: 96px;
+    width: $d-width - 2 * $d-padding;
+    margin: 0 auto;
+  }
 }
 
 .promo__title {
@@ -22,32 +48,109 @@
     width: 100%;
     left: 0;
     bottom: 0;
-    background: url("../img/zigzag-line-desktop.svg");
+    background: url("../img/zigzag-line-desktop.svg") repeat-x center;
+
+    @media (min-width: $t-width) {
+      height: 17px;
+      background-size: 772px 17px;
+    }
+
+    @media (min-width: $d-width) {
+      height: 23px;
+      background-size: 1050px 23px;
+    }
+  }
+
+  @media (min-width: $t-width) {
+    grid-area: top;
+    justify-self: end;
+    width: 100px;
+    text-align: center;
+    margin-right: 13px;
+    margin-top: 6px;
+    line-height: 17px;
+  }
+
+  @media (min-width: $d-width) {
+    grid-area: title;
+    margin: 69px 42px 0 0;
   }
 }
 
 .promo__subtitle {
   order: -1;
   margin: 0 0 4px;
+
+  @media (min-width: $t-width) {
+    grid-area: top;
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: $d-width) {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    z-index: 2;
+    margin: 0;
+    margin-top: 61px;
+  }
+}
+
+.promo__wrapper-desc {
+  grid-area: desc;
 }
 
 .promo__desc {
   margin: 0 0 21px;
+
+  @media (min-width: $t-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $d-width) {
+    margin: 33px 0 52px;
+  }
 }
 
 .promo__list {
   margin: 0 0 28px;
+
+  @media (min-width: $t-width) {
+    letter-spacing: -1.4px;
+  }
 }
 
 .promo__img {
   margin: 0 0 26px;
   width: 100%;
+
+  @media (min-width: $t-width) {
+    grid-area: image;
+    margin: 0;
+    // margin-top: 12px;
+  }
 }
 
+.promo__wrapper-footer {
+  @media (min-width: $t-width) {
+    align-self: end;
+    grid-area: footer;
+  }
+}
 
 .promo__price {
   font-size: 17px;
   font-weight: 700;
   text-align: center;
   margin: 0 0 24.5px;
+
+  @media (min-width: $t-width) {
+    font-size: 20px;
+    line-height: 24px;
+    transform: translate(-2px);
+    margin: 31px;
+  }
+}
+
+.promo__order {
+  width: 100%;
 }

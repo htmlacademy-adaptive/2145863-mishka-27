@@ -99,29 +99,33 @@
         <!-- Порядок отображения заголовков отличается -->
         <h2 class="promo__title">Товар недели</h2>
         <h3 class="promo__subtitle section-title">Вязаные корзинки</h3>
-        <p class="promo__desc">
-          Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.
-        </p>
 
-        <!-- свойства промо товара -->
-        <dl class="promo__list properties">
-          <div class="properties__item">
-            <dt class="properties__name">Цвет:</dt>
-            <dd class="properties__value">тиффани/серый</dd>
-          </div>
-          <div class="properties__item">
-            <dt class="properties__name">Диаметр:</dt>
-            <dd class="properties__value">25 см</dd>
-          </div>
-          <div class="properties__item">
-            <dt class="properties__name">Высота:</dt>
-            <dd class="properties__value">15 см</dd>
-          </div>
-        </dl>
-
+        <div class="promo__wrapper-desc">          
+          <p class="promo__desc">
+            Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.
+          </p>  
+          <!-- свойства промо товара -->
+          <dl class="promo__list properties">
+            <div class="properties__item">
+              <dt class="properties__name">Цвет:</dt>
+              <dd class="properties__value">тиффани/серый</dd>
+            </div>
+            <div class="properties__item">
+              <dt class="properties__name">Диаметр:</dt>
+              <dd class="properties__value">25 см</dd>
+            </div>
+            <div class="properties__item">
+              <dt class="properties__name">Высота:</dt>
+              <dd class="properties__value">15 см</dd>
+            </div>
+          </dl>  
+        </div>
         <img class="promo__img" src="img/triple-set-mobile.jpg" width="260" height="315" alt="Набор из трех вязаных предметов.">
-        <p class="promo__price">Цена: 990 руб.</p>
-        <button class="promo__order button">Заказать</button>
+        <div class="promo__wrapper-footer">
+          <p class="promo__price">Цена: 990 руб.</p>
+          <button class="promo__order button">Заказать</button>
+        </div>
+
       </section>
 
       <!-- Преимущества -->

@@ -3,6 +3,10 @@
 .properties {
   margin: 0;
   line-height: 20px;
+
+  @media (min-width: $d-width) {
+    font-size: 15px;
+  }
 }
 
 .properties__item {

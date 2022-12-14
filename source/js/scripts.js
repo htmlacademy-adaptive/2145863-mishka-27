@@ -1,7 +1,9 @@
+"use strict"
+
 const menuToggle = document.querySelector('.main-nav__toggle');
 const mainNav = document.querySelector('.main-nav');
 
-const onMenuTogglerClick = function() {
+function onMenuTogglerClick() {
     mainNav.classList.toggle('main-nav--hide');
 }
 
