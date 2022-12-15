@@ -6,13 +6,13 @@
 }
 
 .form__group {
-  padding: 30px 0;
+  padding: 31px 0 29px;
   border: solid $form-group-border-color;
   border-width: 2px 0 0 0;
   margin: 0;
 
   &--color {
-    padding: 22px 0 32px;
+    padding: 24px 0 31px;
   }
 }
 
@@ -20,7 +20,9 @@
   color: $form-legend-color;
   line-height: 16px;
   text-transform: uppercase;
-  padding-right: 21px;
+  padding: 0;
+  padding-right: 10px;
+  min-width: 60px;
 }
 
 .form__list {
@@ -116,7 +118,7 @@
 }
 
 .form__group--fullname {
-  padding: 30px 0 7px;
+  padding: 30px 0 10px;
 }
 
 .form__field-group {
@@ -137,11 +139,11 @@
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
-  padding: 16px 0;
+  padding: 16px 0 15px;
   border: solid $color;
   border-width: 0 0 2px 0;
   width: 100%;
-
+  
   &::placeholder {
     color: rgba($color, 0.3);
   }
