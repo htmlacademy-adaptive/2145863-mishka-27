@@ -238,14 +238,14 @@
         <!-- расположение на карте -->
         <div class="contacts__map">
           <!-- TODO КАРТА -->
-          <img class="contacts__map-image" src="img/map-mobile.jpg" width="320" heingt="454" alt="Наше месторасположение на карте.">
+          <div class="map" id="map" style="width: 100%; height: 454px"></div>
+          <!-- <img class="contacts__map-image" src="img/map-mobile.jpg" width="320" heingt="454" alt="Наше месторасположение на карте."> -->
           <span class="visually-hidden">Наше расположение на карте</span>
         </div>
         <a class="contacts__feedback button" href="#">Напишите нам</a>
       </section>
-
     </main>
-
+    
     <!-- Подвал -->
 
     <footer class="footer">
@@ -311,6 +311,9 @@
         <button class="button button--modal" type="submit">Добавить</button>
       </form>
     </div>
+    
+    <!-- карта -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=5c958126-2368-4c1a-90ea-a85cdc1b352c&lang=ru_RU" type="text/javascript"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
