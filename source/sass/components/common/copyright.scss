@@ -6,6 +6,11 @@
   justify-content: center;
   gap: 27px;
   min-height: 77px;
+
+  @media (min-width: $t-width) {
+    justify-content: end;
+    transform: translateY(-3px);
+  }
 }
 
 .copyright__text {

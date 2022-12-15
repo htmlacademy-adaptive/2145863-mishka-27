@@ -12,6 +12,18 @@
     left: 0;
     bottom: 0;
     background: url("../img/zigzag-line-desktop.svg");
+
+    @media (min-width: $t-width) {
+      bottom: -83px;
+      height: 17px;
+      background-size: 772px 17px;
+    }
+
+    @media (min-width: $t-width) {
+      bottom: -90px;
+      height: 23px;
+      background-size: 1050px 23px;
+    }
   }
 
   @media (min-width: $t-width) {
@@ -24,6 +36,7 @@
       "title  button"
       "text   text";
     padding: 0 $t-padding 11px;
+    margin-bottom: 83px;
   }
 
   @media (min-width: $d-width) {
@@ -31,6 +44,7 @@
     width: $d-container;
     margin: 0 auto;
     padding: 0 0 50px 175px;
+    margin-bottom: 90px;
   }
 }
 

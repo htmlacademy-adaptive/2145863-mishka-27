@@ -15,6 +15,10 @@
   text-decoration: none;
   text-transform: uppercase;
 
+  @media (min-width: $t-width) {
+    letter-spacing: -0.7px;
+  }
+
   &:hover {
     color: $btn-hover-color;
     background-color: $btn-hover-background;
@@ -35,7 +39,6 @@
   width: 100%;
   background-color: $primary-color;
   color: $bg-color;
-  // border: none;
   outline: none;
   letter-spacing: -0.2px;
 

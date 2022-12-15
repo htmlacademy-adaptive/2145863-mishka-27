@@ -5,4 +5,27 @@
   grid-template-rows: minmax(80px, 1fr);
   background-color: $footer-bg-color;
   padding: 0 $m-padding;
+
+  @media (min-width: $t-width) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px $t-padding;
+    align-items: center;
+    min-height: 143px;
+  }
+}
+
+.footer__logo {
+  color: $color;
+
+  &:hover {
+    color: $primary-hover-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (max-width: $t-width) {
+    display: none;
+  }
 }

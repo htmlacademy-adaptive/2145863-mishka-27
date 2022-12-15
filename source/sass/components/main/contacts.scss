@@ -1,19 +1,87 @@
 @use "../../global/bootstrap.scss" as *;
 
-// .contacts__title[class*="contacts__title"] {
-//   margin-bottom: 28px;
-// }
-
 .contacts {
   margin-bottom: 39px;
+
+  @media (min-width: $t-width) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: $d-width) {
+    display: grid;
+    grid-template-columns: 174px ($d-container - 174 - 527) 527px;
+    grid-template-areas:
+      ". text   map"
+      ". button map";
+    padding: 71px $d-padding 105px;
+    margin: 0 auto;
+  }
 }
+
+.contacts__title {
+  position: relative;
+
+  &::after {
+    @media (min-width: $t-width) {
+      content: "";
+      position: absolute;
+      background: url("../img/icons/flag.svg");
+      width: 47px;
+      height: 81px;
+      top: -23px;
+      right: 3px;
+    }
+
+    @media (min-width: $d-width) {
+      left: -111px;
+      top: -18px;
+    }
+  }
+
+  @media (min-width: $t-width) {
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: $d-width) {
+    margin-bottom: 35px;
+  }
+}
+
 
 .contacts__wrapper {
   margin: 40px $m-padding 62px $m-padding - 1;
+  grid-area: text;
+
+  @media (min-width: $t-width) {
+    padding: 70px $t-padding 0;
+    margin: 0;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: $d-width) {
+    padding: 80px 0 0;
+    margin-bottom: 0;
+  }
 }
 
 .contacts__feedback {
   margin: 0 $m-padding;
+  grid-area: button;
+
+  @media (min-width: $t-width) {
+    display: block;
+    margin: 0 auto;
+    padding: 16px 41px;
+  }
+
+  @media (min-width: $d-width) {
+    justify-self: start;
+    align-self: end;
+    margin: 0;
+    transform: translateY(3px);
+  }
 }
 
 .contacts__list {
@@ -25,6 +93,20 @@
   font-size: 14px;
   font-style: normal;
   line-height: 30px;
+
+  @media (min-width: $t-width) {
+    display: grid;
+    grid-template-columns: 78px 1fr 78px 1fr;
+    gap: 0;
+    font-size: 17px;
+  }
+
+  @media (min-width: $d-width) {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    row-gap: 30px;
+    padding-right: 20px;
+  }
 }
 
 .contacts__text {
@@ -43,6 +125,14 @@
     left: 0;
     bottom: -2px;
     border-bottom: 1px solid $brand-color;
+
+    @media (min-width: $t-width) {
+      bottom: -4px;
+    }
+
+    @media (min-width: $d-width) {
+      bottom: -8px;
+    }
   }
 
   &:hover {
@@ -52,9 +142,19 @@
 
 .contacts__map {
   height: 455px;
+  // height: 355px;
   width: 100%;
   background-color: $footer-bg-color;
   margin-bottom: 40px;
+  grid-area: map;
+
+  @media (min-width: $t-width) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $d-width) {
+    margin: 0;
+  }
 }
 
 .contacts__map-image {
