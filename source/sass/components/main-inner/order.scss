@@ -2,11 +2,21 @@
 
 .order {
   padding: 17px $m-padding 55px;
+
+  @media (min-width: $t-width) {
+    padding: 55px 0;
+  }
 }
 
 .order__introduction {
   font-size: 13px;
   margin: 0 0 29px;
+
+  @media (min-width: $t-width) {
+    font-size: 17px;
+    line-height: 30px;
+    margin: 0 $t-padding 17px;
+  }
 }
 
 .order__legend {

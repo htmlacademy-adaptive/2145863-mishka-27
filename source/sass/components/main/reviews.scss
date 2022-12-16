@@ -19,7 +19,7 @@
       background-size: 772px 17px;
     }
 
-    @media (min-width: $t-width) {
+    @media (min-width: $d-width) {
       bottom: -90px;
       height: 23px;
       background-size: 1050px 23px;
@@ -70,7 +70,7 @@
 
 .reviews__text {
   line-height: 30px;
-  margin: 0 0 33px;
+  margin: 0 0 35px;
 
   @media (min-width: $t-width) {
     margin: 38px 0 61px;

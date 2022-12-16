@@ -27,6 +27,8 @@
 
 .about-us__list {
   @include list-reset;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: $t-width) {
     display: grid;
@@ -40,15 +42,15 @@
   }
 }
 
-.about-us__column-1 {
-  display: flex;
-  flex-direction: column;
-}
+// .about-us__column-1 {
+//   display: flex;
+//   flex-direction: column;
+// }
 
-.about-us__column-2 {
-  display: flex;
-  flex-direction: column;
-}
+// .about-us__column-2 {
+//   display: flex;
+//   flex-direction: column;
+// }
 
 .about-us__item {
   padding-top: 55px;
@@ -106,5 +108,32 @@
 
   @media (min-width: $t-width) {
     letter-spacing: 0;
+  }
+}
+
+
+@media (max-width: $t-width) {
+  .about-us__item--eco {
+    order: 1;
+  }
+
+  .about-us__item--handmade {
+    order: 4;
+  }
+
+  .about-us__item--price {
+    order: 2;
+  }
+
+  .about-us__item--national {
+    order: 5;
+  }
+
+  .about-us__item--likes {
+    order: 3;
+  }
+
+  .about-us__item--package {
+    order: 6;
   }
 }

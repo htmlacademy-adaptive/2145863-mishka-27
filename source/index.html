@@ -132,28 +132,30 @@
       <section class="about-us">
         <h2 class="about-us__title section-title">Коротко о нас:</h2>
         <ul class="about-us__list">
-          <div class="about-us__column-1">
+            <!-- #1 -->
             <li class="about-us__item about-us__item--eco">
               <p class="about-us__text">Экологически<br>чистые материалы</p>
             </li>
-            <li class="about-us__item about-us__item--price">
-              <p class="about-us__text">Скандинавский стиль<br>по российской цене</p>
-            </li>
-            <li class="about-us__item about-us__item--likes">
-              <p class="about-us__text">Увеличивает лайки<br>на фотографиях</p>
-            </li>
-          </div>
-          <div class="about-us__column-2">
+            <!-- #4 -->
             <li class="about-us__item about-us__item--handmade">
               <p class="about-us__text">Связано вручную<br>с любовью и умилением</p>
             </li>
+            <!-- #2 -->
+            <li class="about-us__item about-us__item--price">
+              <p class="about-us__text">Скандинавский стиль<br>по российской цене</p>
+            </li>
+            <!-- #5 -->
             <li class="about-us__item about-us__item--national">
               <p class="about-us__text">Поддержка отечественного<br>производителя</p>
             </li>
+            <!-- #3 -->
+            <li class="about-us__item about-us__item--likes">
+              <p class="about-us__text">Увеличивает лайки<br>на фотографиях</p>
+            </li>
+            <!-- #6 -->
             <li class="about-us__item about-us__item--package">
               <p class="about-us__text">Поставляется<br>в подарочной упаковке</p>
             </li>
-          </div>
         </ul>
       </section>
 
@@ -305,7 +307,7 @@
     <!-- Модальное окно - Положить в корзину-->
     <div class="modal-container modal-container--hide">
       <form class="modal" action="https://echo.htmlacademy.ru" method="post">
-        <h2 class="modal__title">Добавить&nbsp  в&nbsp;корзину</h2>
+        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
         <fieldset class="modal__group">
           <legend class="modal__legend">Выберите размер:</legend>
           <div class="modal__group-wrapper">
@@ -314,7 +316,8 @@
             <input class="modal__input" type="radio" id="size-m" name="size" value="M" hidden>
             <label class="modal__label" for="size-m">M</label>
             <input class="modal__input" type="radio" id="size-l" name="size" value="L" hidden>
-            <label class="modal__label" for="size-l">L</div>
+            <label class="modal__label" for="size-l">L</label>
+          </div>
         </fieldset>
         <button class="button button--modal" type="submit">Добавить</button>
       </form>

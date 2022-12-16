@@ -87,16 +87,18 @@
 
           <!-- Тип -->
           <fieldset class="form__group">
-            <legend class="form__legend">Тип</legend>
+            <div class="form__grid-wrapper">
+              <legend class="form__legend"><span class="from__legend-wrapper">Тип</span></legend>
+            </div>
             <ul class="form__list">
               <li class="form__item">
-                <input class="form__input" id="accessory" type="radio" name="type" value="accessory" checked hidden>
+                <input class="form__input visually-hidden" id="accessory" type="radio" name="type" value="accessory" checked>
                 <label class="form__caption form__caption--radio" for="accessory">
                   Аксессуар для интерьера
                 </label>
               </li>
               <li class="form__item">
-                <input class="form__input" id="toy" type="radio" name="type" value="toy" hidden>
+                <input class="form__input visually-hidden" id="toy" type="radio" name="type" value="toy">
                 <label class="form__caption form__caption--radio" for="toy">
                   Детская игрушка
                 </label>
@@ -105,51 +107,57 @@
           </fieldset>
 
           <!-- Цвет -->
-          <fieldset class="form__group form__group--color">
-            <legend class="form__legend">Цвет</legend>
-            <ul class="form__list">
-              <li class="form__item form__item--checkbox">
-                <input class="form__input" id="white" type="checkbox" name="white" hidden checked>
-                <label class="form__caption form__caption--checkbox" for="white">
-                  Белый
-                </label>
-              </li>
-              <li class="form__item form__item--checkbox">
-                <input class="form__input" id="grey" type="checkbox" name="grey" hidden checked>
-                <label class="form__caption form__caption--checkbox" for="grey">
-                  Серый
-                </label>
-              </li>
-              <li class="form__item form__item--checkbox">
-                <input class="form__input" id="tiffany" type="checkbox" name="tiffany" hidden>
-                <label class="form__caption form__caption--checkbox" for="tiffany">
-                  Тиффани
-                </label>
-              </li>
-              <li class="form__item form__item--checkbox">
-                <input class="form__input" id="black" type="checkbox" name="black" hidden>
-                <label class="form__caption form__caption--checkbox" for="black">
-                  Черный
-                </label>
-              </li>
-              <li class="form__item form__item--checkbox">
-                <input class="form__input" id="pink" type="checkbox" name="pink" hidden>
-                <label class="form__caption form__caption--checkbox" for="pink">
-                  Розовый
-                </label>
-              </li>
-              <li class="form__item form__item--checkbox">
-                <input class="form__input" id="orange" type="checkbox" name="orange" hidden>
-                <label class="form__caption form__caption--checkbox" for="orange">
-                  Оранжевый
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="container">
+            <fieldset class="form__group form__group--color">
+              <div class="form__grid-wrapper">
+                <legend class="form__legend"><span class="from__legend-wrapper">Цвет</span></legend>
+              </div>
+              <ul class="form__list form__list--color">
+                <li class="form__item form__item--checkbox">
+                  <input class="form__input visually-hidden" id="white" type="checkbox" name="white" checked>
+                  <label class="form__caption form__caption--checkbox" for="white">
+                    Белый
+                  </label>
+                </li>
+                <li class="form__item form__item--checkbox">
+                  <input class="form__input visually-hidden" id="grey" type="checkbox" name="grey" checked>
+                  <label class="form__caption form__caption--checkbox" for="grey">
+                    Серый
+                  </label>
+                </li>
+                <li class="form__item form__item--checkbox">
+                  <input class="form__input visually-hidden" id="tiffany" type="checkbox" name="tiffany">
+                  <label class="form__caption form__caption--checkbox" for="tiffany">
+                    Тиффани
+                  </label>
+                </li>
+                <li class="form__item form__item--checkbox">
+                  <input class="form__input visually-hidden" id="black" type="checkbox" name="black">
+                  <label class="form__caption form__caption--checkbox" for="black">
+                    Черный
+                  </label>
+                </li>
+                <li class="form__item form__item--checkbox">
+                  <input class="form__input visually-hidden" id="pink" type="checkbox" name="pink">
+                  <label class="form__caption form__caption--checkbox" for="pink">
+                    Розовый
+                  </label>
+                </li>
+                <li class="form__item form__item--checkbox">
+                  <input class="form__input visually-hidden" id="orange" type="checkbox" name="orange">
+                  <label class="form__caption form__caption--checkbox" for="orange">
+                    Оранжевый
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
           <!-- ФИО -->
           <fieldset class="form__group form__group--fullname">
-            <legend class="form__legend">ФИО</legend>
+            <div class="form__grid-wrapper form__grid-wrapper--fullname">
+              <legend class="form__legend"><span class="from__legend-wrapper">ФИО</span></legend>
+            </div>
             <p class="form__field-group">
               <label class="form__caption form__caption--fullname" for="name">Имя:</label>
               <input class="form__input-control" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
