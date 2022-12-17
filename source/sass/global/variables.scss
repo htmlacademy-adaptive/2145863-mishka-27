@@ -19,6 +19,7 @@ $form-group-border-color: #62d1ba;
 $icon-hover: $form-group-border-color;
 $form-check-mark: $form-group-border-color;
 $form-legend-color: #63d1bb;
+
 // Цвета кнопок
 $btn-color: $text-color;
 $btn-background: trasparent;
@@ -45,3 +46,7 @@ $d-container: $d-width - 2 * $d-padding;
 $m-header-height: 79px;
 $t-header-height: 89px;
 $d-header-height: $t-header-height;
+
+// Размеры для декстопа
+$left: 111px;
+$right: 222px;

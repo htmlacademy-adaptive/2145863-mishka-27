@@ -28,7 +28,9 @@
   }
 
   &--no-border {
-    border: none;
+    @media (min-width: $t-width) {
+      border: none;
+    }
   }
 }
 
