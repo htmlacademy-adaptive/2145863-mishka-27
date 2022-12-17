@@ -86,10 +86,8 @@
         <form class="order__form form" action="https://echo.htmlacademy.ru" method="post">
 
           <!-- Тип -->
-          <fieldset class="form__group">
-            <div class="form__grid-wrapper">
-              <legend class="form__legend"><span class="from__legend-wrapper">Тип</span></legend>
-            </div>
+          <fieldset class="form__group" aria-labelledby="form__legend-type">
+              <div class="form__legend" id="form__legend-type"><span class="from__legend-wrapper">Тип</span></div>
             <ul class="form__list">
               <li class="form__item">
                 <input class="form__input visually-hidden" id="accessory" type="radio" name="type" value="accessory" checked>
@@ -108,10 +106,8 @@
 
           <!-- Цвет -->
           <div class="container">
-            <fieldset class="form__group form__group--color">
-              <div class="form__grid-wrapper">
-                <legend class="form__legend"><span class="from__legend-wrapper">Цвет</span></legend>
-              </div>
+            <fieldset class="form__group form__group--color" aria-labelledby="form__legend-color">
+                <div class="form__legend" id="form__legend-color"><span class="from__legend-wrapper">Цвет</span></div>
               <ul class="form__list form__list--color">
                 <li class="form__item form__item--checkbox">
                   <input class="form__input visually-hidden" id="white" type="checkbox" name="white" checked>
@@ -154,10 +150,10 @@
           </div>
 
           <!-- ФИО -->
-          <fieldset class="form__group form__group--fullname">
-            <div class="form__grid-wrapper form__grid-wrapper--fullname">
-              <legend class="form__legend"><span class="from__legend-wrapper">ФИО</span></legend>
-            </div>
+          <fieldset class="form__group form__group--fullname" aria-labelledby="form__legend-fullname">
+              <div class="form__legend form__legend--fullname" id="form__legend-fullname">
+                <span class="from__legend-wrapper">ФИО</span>
+              </div>
             <p class="form__field-group">
               <label class="form__caption form__caption--fullname" for="name">Имя:</label>
               <input class="form__input-control" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
@@ -201,7 +197,7 @@
             </p>
 
             <p class="form__field-group form__field-group--bottom">
-              <label class="form__label-group form__label-group--text" for="text">Доп</label>
+              <label class="form__label-group form__label-group--text" for="form-text">Доп</label>
               <textarea class="form__textarea" id="form-text" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </p>
 

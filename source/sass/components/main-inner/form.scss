@@ -6,13 +6,13 @@
   font-weight: 700;
 }
 
-.form__grid-wrapper {
-  display: flex;
+// .form__grid-wrapper {
+//   display: flex;
 
-  &--fullname {
-    margin-bottom: 29px;
-  }
-}
+//   &--fullname {
+//     margin-bottom: 29px;
+//   }
+// }
 
 .from__legend-wrapper {
   min-width: 60px;
@@ -56,7 +56,9 @@
   padding: 0;
   // padding-right: 10px;
   // min-width: 200px;
-  width: 100%;
+  // min-width: 200px;
+  flex-basis: 150px;
+  // width: 100%;
 
   display: flex;
 
@@ -77,6 +79,10 @@
     // position: absolute;
     position: static;
     transform: translateY(13px);
+  }
+
+  &--fullname {
+    margin-bottom: 29px;
   }
 }
 
