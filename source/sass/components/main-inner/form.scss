@@ -343,6 +343,7 @@
 
   &:focus-visible {
     outline: none;
+    border-color: $form-group-border-color;
   }
 
   &--phone {
@@ -470,6 +471,17 @@
 .form__input-control:focus-visible + .form__input-icon {
   color: $icon-hover;
   opacity: 1;
+}
+
+
+// .form__input--radio:focus-visible .form__caption--radio::before {
+// .form__input--radio
+.form__input--radio:focus-visible + .form__caption--radio::before {
+  box-shadow: 0 0 0 5px rgba($brand-color, 0.5);
+}
+
+.form__input--checkbox:focus-visible + .form__caption--checkbox::before {
+  box-shadow: 0 0 0 5px rgba($brand-color, 0.5);
 }
 
 // центр радио-кнопки
