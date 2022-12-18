@@ -2,20 +2,51 @@
 
 .products {
   @include list-reset;
-  padding: $m-padding;
+  margin-bottom: 30px;
 
   @media (min-width: $t-width) {
-    padding: 67px $t-padding 0;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $d-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 51px;
+    margin-bottom: 57px;
   }
 }
 
 .product__desc-wrappper {
   padding: 28px 26px 24px 28px;
+
+  @media (min-width: $t-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 27px 32px 25px 34px;
+    flex-grow: 1;
+  }
+
+  @media (min-width: $d-width) {
+    padding: 27px 32px 25px 28px;
+  }
 }
 
 .products__item {
   margin-bottom: 31px;
-  border: 1px solid $stroke-color;
+  outline: 1px solid $stroke-color;
+  outline-offset: -1px;
+
+  @media (min-width: $t-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $d-width) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -31,10 +62,10 @@
 }
 
 .products__link {
-  display: flex;
+  display: block;
 
   &:hover {
-    opacity: 0.85;
+    opacity: 0.9;
   }
 
   &:active {
@@ -57,6 +88,7 @@
 
 .products__image {
   width: 100%;
+  display: block;
 }
 
 .products__title {
@@ -64,9 +96,22 @@
   line-height: 24px;
   margin: 0 0 6px;
 
+  @media (min-width: $t-width) {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $d-width) {
+    margin-bottom: 7px;
+  }
+
   &--long {
     margin-bottom: 7px;
     transform: translateY(-3px);
+
+    @media (min-width: $t-width) {
+      transform: none;
+    }
   }
 }
 
@@ -74,6 +119,15 @@
   margin: 0 0 18px;
   font-size: 13px;
   line-height: 30px;
+
+  @media (min-width: $t-width) {
+    font-size: 15px;
+    margin-bottom: auto;
+  }
+
+  @media (min-width: $d-width) {
+    padding-bottom: 13px;
+  }
 }
 
 .product__footer {
@@ -85,6 +139,10 @@
   color: $color;
   font-weight: 700;
   padding-top: 22px;
+
+  @media (min-width: $t-width) {
+    font-size: 17px;
+  }
 }
 
 .products__buy {

@@ -53,3 +53,15 @@
     }
   }
 }
+
+.main-inner__container {
+  padding: $m-padding;
+
+  @media (min-width: $t-width) {
+    padding: 67px $t-padding 37px;
+  }
+
+  @media (min-width: $d-width) {
+    padding: 112px $d-padding 34px;
+  }
+}
