@@ -102,15 +102,19 @@
   margin-right: $m-padding;
   cursor: pointer;
 
-  &:hover {
-    opacity: 0.6;
+  @media (min-width: $t-width) {
+    display: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   &:active {
     opacity: 0.3;
   }
 
-  @media (min-width: $t-width) {
+  &--no-js {
     display: none;
   }
 }

@@ -107,6 +107,7 @@
   font-style: normal;
   text-decoration: none;
   color: $text-color;
+  inline-size: fit-content;
 
   @media (min-width: $t-width) {
     font-size: 17px;

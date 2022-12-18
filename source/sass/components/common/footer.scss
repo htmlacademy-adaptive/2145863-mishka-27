@@ -12,6 +12,12 @@
     align-items: center;
     min-height: 143px;
   }
+
+  @media (min-width: $d-width) {
+    width: $d-width;
+    padding: 0 $d-padding;
+    margin: 0 auto;
+  }
 }
 
 .footer__logo {

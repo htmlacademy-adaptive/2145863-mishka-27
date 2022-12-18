@@ -63,5 +63,7 @@
 
   @media (min-width: $d-width) {
     padding: 112px $d-padding 34px;
+    width: $d-width;
+    margin: 0 auto;
   }
 }
