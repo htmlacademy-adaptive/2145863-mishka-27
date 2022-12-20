@@ -2,12 +2,33 @@
 
 .categories__list {
   @include list-reset;
+
+  @media (min-width: $t-width) {
+    padding: 0 $t-padding;
+    display: flex;
+    line-height: 30px;
+    letter-spacing: 0.6px;
+  }
+
+  @media (min-width: $d-width) {
+    width: $d-container;
+    padding: 0;
+    margin: 0 auto;
+  }
 }
 
 .categories__item {
-  position: relative;
   display: grid;
   min-height: 103px;
+  flex-grow: 1;
+
+  @media (min-width: $t-width) {
+    width: 50%;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
 }
 
 .categories__item--left {
@@ -20,6 +41,7 @@
 
 .categories__link {
   position: relative;
+  display: block;
   font-size: 19px;
   font-weight: 700;
   text-decoration: none;
@@ -38,6 +60,10 @@
     background: url("../img/icons/interior.svg");
     top: 24px;
     right: 36px;
+
+    @media (min-width: $t-width) {
+      top: 29px;
+    }
   }
 
   &--right::after {
@@ -46,14 +72,27 @@
     background: url("../img/icons/toy-svg.svg");
     top: 21px;
     right: 27px;
+
+    @media (min-width: $t-width) {
+      top: 30px;
+      right: 33px;
+    }
   }
 
   &:hover::after {
     opacity: 0.7;
     transform: translateY(-5px);
+
+    @media (min-width: $t-width) {
+      transform: none;
+    }
   }
 
   &:active::after {
     opacity: 0.3;
+  }
+
+  @media (min-width: $t-width) {
+    padding: 25px $t-padding 46px 36px;
   }
 }

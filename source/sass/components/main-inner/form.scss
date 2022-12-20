@@ -1,18 +1,66 @@
 @use "../../global/bootstrap.scss" as *;
 
+// TODO Добавить состояния в формы (hover, active, focus)
 .form {
   font-size: 17px;
   font-weight: 700;
 }
 
+.from__legend-wrapper {
+  min-width: 60px;
+}
+
+.form__wrapper-fullname {
+  @media (min-width: $t-width) {
+    padding: 4px 0 0;
+  }
+}
+
+.form__wrapper-button {
+  @media (min-width: $t-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $t-padding;
+  }
+
+  @media (min-width: $d-width) {
+    width: $d-width;
+    margin: 0 auto;
+    padding: 0 $right 0 $left + 114px;
+  }
+}
+
 .form__group {
-  padding: 30px 0;
-  border: solid $form-group-border-color;
-  border-width: 2px 0 0 0;
+  padding: 0;
+  border: none;
   margin: 0;
 
+  @media (min-width: $t-width) {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    border: none;
+    padding: 47px $t-padding 50px;
+  }
+
+  @media (min-width: $d-width) {
+    padding: 0 $right 50px $left;
+    grid-template-columns: 114px 1fr;
+    width: $d-width;
+    margin: 0 auto;
+  }
+
   &--color {
-    padding: 22px 0 32px;
+    @media (min-width: $t-width) {
+      // width: $t-width;
+      padding: 50px $t-padding;
+    }
+
+    @media (min-width: $d-width) {
+      padding: 49px 137px 50px $left;
+      width: $d-width;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -20,82 +68,174 @@
   color: $form-legend-color;
   line-height: 16px;
   text-transform: uppercase;
-  padding-right: 21px;
+  padding: 0;
+  flex-basis: 150px;
+  display: flex;
+
+  @media (min-width: $t-width) {
+    position: static;
+    transform: translateY(17px);
+  }
+
+  &::after {
+    content: "";
+    align-self: center;
+    display: block;
+    height: 1px;
+    background-color: $form-legend-color;
+    flex-grow: 1;
+
+    @media (min-width: $t-width) {
+      display: none;
+    }
+  }
+
+  &--fullname {
+    margin-bottom: 29px;
+
+    @media (min-width: $t-width) {
+      transform: translateY(22px);
+    }
+  }
 }
 
 .form__list {
   @include list-reset;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 32px;
+  gap: 10px;
+
+  @media (min-width: $t-width) {
+    gap: 24px;
+    // padding: 0 160px 54px 170px;
+    padding: 0;
+  }
+
+  &--color {
+    padding: 24px 0 34px;
+    row-gap: 23px;
+
+    @media (min-width: $t-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0;
+      row-gap: 24px;
+      column-gap: 22px;
+    }
+
+    @media (min-width: $d-width) {
+      grid-template-columns: repeat(3, 233px);
+      gap: 22px 30px;
+    }
+  }
 }
 
 .form__caption {
-  position: relative;
   display: flex;
-  padding-left: 60px;
-  min-height: 42px;
+  padding-right: 30px;
+  position: relative;
+
   align-items: center;
   font-size: 17px;
   line-height: 18px;
   cursor: pointer;
+  inline-size: fit-content;
+
+  @media (min-width: $t-width) {
+    font-size: 19px;
+  }
+
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    outline: 2px solid $text-color;
+    outline-offset: -3px;
+    margin-right: 17px;
+    min-width: 42px;
+    height: 42px;
+
+    @media (min-width: $t-width) {
+      min-width: 51px;
+      height: 51px;
+      margin-right: 26px;
+      margin-left: 2px;
+    }
+
+    @media (min-width: $d-width) {
+      margin-left: 0;
+      margin-right: 27px;
+    }
+  }
+
+  &:hover::before {
+    outline-color: $icon-hover;
+  }
+
+  &:active::before {
+    outline-color: rgba($color, 0.3);
+  }
 }
 
 .form__caption--radio {
   &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 1px;
-    transform: translateY(-50%);
-    width: 37px;
-    height: 37px;
     border-radius: 50%;
-    border: 2px solid $text-color;
   }
 
-  &:hover::before {
-    border-color: $form-check-mark;
-  }
+  // &:hover::before {
+  //   border-color: $form-check-mark;
+  // }
 
-  &:active::before {
-    border-color: rgba($color, 0.3);
-  }
+  // &:active::before {
+  //   border-color: rgba($color, 0.3);
+  // }
 }
 
 .form__caption--checkbox {
   &::before {
     content: "";
-    position: absolute;
-    top: 50%;
-    left: 1px;
-    transform: translateY(-50%);
-    width: 38px;
+    min-width: 38px;
     height: 38px;
-    border: 2px solid $text-color;
+    margin-right: 21px;
+
+    @media (min-width: $t-width) {
+      width: 52px;
+      height: 52px;
+      margin-right: 29px;
+      margin-left: 0;
+    }
+
+    @media (min-width: $d-width) {
+      width: 53px;
+      height: 53px;
+      transform: translateY(-2px);
+    }
   }
 
-  &:hover::before {
-    border-color: $form-check-mark;
-  }
+  // &:hover::before {
+  //   border-color: $form-check-mark;
+  // }
 
-  &:active::before {
-    border-color: rgba($color, 0.3);
-  }
+  // &:active::before {
+  //   border-color: rgba($color, 0.3);
+  // }
 }
 
 .form__caption--fullname {
   padding-left: 0;
   min-height: auto;
-}
 
-.form__item:not(:last-child) {
-  margin-bottom: 11px;
-}
+  @media (min-width: $t-width) {
+    padding-right: 26px;
+  }
 
-.form__item--checkbox:not(:last-child) {
-  margin-bottom: 19px;
+  &::before {
+    display: none;
+  }
 }
 
 .form__input:checked + .form__caption--radio::after {
-  content: "";
   position: absolute;
   top: 50%;
   left: 12px;
@@ -104,32 +244,75 @@
   height: 16px;
   border-radius: 50%;
   background-color: $form-check-mark;
+
+  @media (min-width: $t-width) {
+    width: 20px;
+    height: 20px;
+    left: 16px;
+  }
 }
 
 .form__input:checked + .form__caption--checkbox::after {
-  content: "";
-  position: absolute;
-  left: 7px;
-  width: 23px;
-  height: 16px;
-  background: url("../img/icons/icon-tick.svg");
+  @media (min-width: $d-width) {
+    width: 32px;
+    height: 22px;
+    left: 12px;
+  }
 }
 
 .form__group--fullname {
-  padding: 30px 0 7px;
+  margin-bottom: 8px;
+
+  @media (min-width: $t-width) {
+    margin-bottom: 0;
+    padding-bottom: 28px;
+  }
+
+  @media (min-width: $d-width) {
+    padding-top: 47px;
+  }
 }
 
 .form__field-group {
   display: flex;
   flex-direction: column;
-  margin: 0 0 22px;
+  margin: 0 0 23px;
+
+  @media (min-width: $t-width) {
+    flex-direction: row;
+    margin-bottom: 24px;
+  }
 
   &--bottom {
     margin-bottom: 31px;
+
+    @media (min-width: $t-width) {
+      display: grid;
+      grid-template-columns: 25% 75%;
+      margin-bottom: 26px;
+    }
+
+    @media (min-width: $d-width) {
+      grid-template-columns: 114px 1fr;
+    }
   }
 
-  &--bottom:last-child {
+  &--text {
     margin-bottom: 11px;
+
+    @media (min-width: $t-width) {
+      display: grid;
+      grid-template-columns: 25% 75%;
+      padding: $t-padding;
+      margin-bottom: 3px;
+    }
+
+    @media (min-width: $d-width) {
+      margin: 0 auto;
+      width: $d-width;
+      padding: $t-padding 225px 48px $left;
+      grid-template-columns: 114px 1fr;
+    }
   }
 }
 
@@ -137,10 +320,18 @@
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
-  padding: 16px 0;
+  padding: 16px 0 15px;
   border: solid $color;
   border-width: 0 0 2px 0;
   width: 100%;
+  background-color: transparent;
+  height: 51px;
+
+  @media (min-width: $t-width) {
+    font-size: 19px;
+    line-height: 18px;
+    padding: 12px 17px 12px;
+  }
 
   &::placeholder {
     color: rgba($color, 0.3);
@@ -152,13 +343,25 @@
 
   &:focus-visible {
     outline: none;
+    border-color: $form-group-border-color;
+  }
+
+  &--phone {
+    @media (min-width: $t-width) {
+      padding: 27px 17px 25px;
+    }
   }
 }
 
 .form__group--hidden {
-  border: 0;
-  margin: 0;
-  padding: 0;
+  @media (min-width: $t-width) {
+    display: block;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: $d-width) {
+    padding-top: 47px;
+  }
 }
 
 .form__label-group {
@@ -173,10 +376,18 @@
     flex-grow: 1;
     height: 1.5px;
     background-color: $form-group-border-color;
+
+    @media (min-width: $t-width) {
+      display: none;
+    }
   }
 
   &--text {
     margin-bottom: 19px;
+
+    @media (min-width: $t-width) {
+      transform: translateY(-34px);
+    }
   }
 
   &--phone::after {
@@ -200,6 +411,12 @@
   font-size: 17px;
   line-height: 18px;
   border: 2px solid $color;
+  background-color: transparent;
+
+  @media (min-width: $t-width) {
+    font-size: 19px;
+    padding: 16px;
+  }
 
   &:hover {
     border-color: $form-group-border-color;
@@ -221,12 +438,29 @@
   transform: translateY(-50%) translateY(-3px);
   right: 7px;
   opacity: 0.2;
+
+  @media (min-width: $t-width) {
+    right: 26px;
+  }
+
+  @media (min-width: $d-width) {
+    right: 12px;
+  }
 }
 
 .form__input-icon--email {
   top: 50%;
   transform: translateY(-50%);
   right: 3px;
+
+  @media (min-width: $t-width) {
+    transform: translateY(-44%);
+    right: 22px;
+  }
+
+  @media (min-width: $d-width) {
+    right: 8px;
+  }
 }
 
 .form__input-control:hover + .form__input-icon {
@@ -237,4 +471,44 @@
 .form__input-control:focus-visible + .form__input-icon {
   color: $icon-hover;
   opacity: 1;
+}
+
+
+// .form__input--radio:focus-visible .form__caption--radio::before {
+// .form__input--radio
+.form__input--radio:focus-visible + .form__caption--radio::before {
+  box-shadow: 0 0 0 5px rgba($brand-color, 0.5);
+}
+
+.form__input--checkbox:focus-visible + .form__caption--checkbox::before {
+  box-shadow: 0 0 0 5px rgba($brand-color, 0.5);
+}
+
+// центр радио-кнопки
+.form__input--radio:checked + .form__caption--radio::before {
+  background: radial-gradient($icon-hover 7px, transparent 8px);
+
+  @media (min-width: $t-width) {
+    background: radial-gradient($icon-hover 11px, transparent 12px);
+  }
+}
+
+// галочка чек-бокса
+.form__input--checkbox:checked + .form__caption--checkbox::after {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 12px;
+  left: 9px;
+  bottom: 16px;
+  transform: rotate(-45deg);
+  border: 2px solid $color;
+  border-width: 0 0 2px 2px;
+
+  @media (min-width: $t-width) {
+    width: 30px;
+    height: 16px;
+    left: 11px;
+    bottom: 24px;
+  }
 }

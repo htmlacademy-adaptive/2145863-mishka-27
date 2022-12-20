@@ -1,23 +1,63 @@
 @use "../../global/bootstrap.scss" as *;
 
 .main-nav {
-  position: absolute;
-  z-index: 1;
   display: grid;
   grid-template-rows: $m-header-height;
   grid-template-areas: "top";
   font-size: 17px;
   font-weight: 700;
-  left: 0;
-  right: 0;
   min-width: $m-width;
+  --bg-navigation: #f9f9f9;
+
+  @media (min-width: $t-width) {
+    grid-template-columns: 209px 1fr 309px;
+    grid-template-rows: minmax($t-header-height, auto);
+    grid-template-areas:
+      "logo . ."
+      ". . delivery";
+  }
+
+  @media (min-width: $d-width) {
+    grid-template-columns: 1fr 480px 188px 480px 1fr;
+    grid-template-areas:
+      ". site-list logo user-list ."
+      ". .        .     delivery  .";
+    background-color: $bg-hero;
+  }
+}
+
+.main-nav.main-nav--inner {
+  --bg-navigation: #f1f1f1;
+}
+
+.main-nav__logo-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: top;
+
+  @media (min-width: $t-width) {
+    grid-area: logo;
+  }
+
+  @media (min-width: $d-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: -1/1;
+    grid-row: 1/2;
+    background-color: $bg-color;
+    border-bottom: 1px solid $stroke-color;
+  }
 }
 
 .main-nav__logo {
+  z-index: 2;
   place-self: center;
   display: flex;
-  grid-area: top;
-  padding: 21px 5px 22px;
+  padding: 5px;
+  transform: translateY(4px);
 
   &:hover {
     opacity: 0.6;
@@ -25,6 +65,27 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $t-width) {
+    padding: 0;
+    transform: translateY(3px);
+  }
+
+  @media (min-width: $d-width) {
+    transform: translateY(3px);
+  }
+}
+
+.main-nav__logo-img {
+  @media (min-width: $t-width) {
+    width: 113px;
+    height: 46px;
+  }
+
+  @media (min-width: $d-width) {
+    width: 149px;
+    height: 72px;
   }
 }
 
@@ -39,13 +100,22 @@
   border: none;
   padding: 5px 2px;
   margin-right: $m-padding;
+  cursor: pointer;
 
-  &:hover {
-    opacity: 0.6;
+  @media (min-width: $t-width) {
+    display: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   &:active {
     opacity: 0.3;
+  }
+
+  &--no-js {
+    display: none;
   }
 }
 
@@ -54,15 +124,58 @@
 }
 
 .main-nav__list {
+  @include list-reset;
   background-color: $bg-color;
   z-index: 1;
+
+  @media (min-width: $t-width) {
+    background-color: transparent;
+  }
 }
 
 .main-nav__item {
-  // border-top: 1px solid;
-  box-shadow: inset 0 0 0 1px $stroke-color;
+  border-bottom: 1px solid $stroke-color;
+
+  &:first-child {
+    border-top: 1px solid $stroke-color;
+
+    @media (min-width: $t-width) {
+      border-top: none;
+    }
+  }
+
+  @media (min-width: $t-width) {
+    border-bottom: none;
+  }
 }
 
-.main-nav--hide .main-nav__list {
-  display: none;
+.main-nav__delivery {
+  grid-area: delivery;
+  z-index: 2;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: right;
+  padding-right: $t-padding;
+  padding-top: 20px;
+  color: $text-color;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (max-width: $t-width) {
+    display: none;
+  }
+}
+
+// скрывает меню в нормальном состоянии на мобильном
+@media (max-width: $t-width) {
+  .main-nav--hide .main-nav__list {
+    display: none;
+  }
 }

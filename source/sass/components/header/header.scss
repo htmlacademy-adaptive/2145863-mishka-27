@@ -1,5 +1,15 @@
 @use "../../global/bootstrap.scss" as *;
 
 .header {
+
   height: $m-header-height;
+
+  @media (min-width: $t-width) {
+    // min-height: $t-header-height;
+    height: auto;
+  }
+
+  &--no-js {
+    height: auto;
+  }
 }

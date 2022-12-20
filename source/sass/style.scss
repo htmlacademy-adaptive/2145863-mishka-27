@@ -1,10 +1,10 @@
 // Файл с часто используемыми элементами
 @use "./global/bootstrap.scss" as *;
 
-// Базовые блоки
-// @use "./components/visually-hidden.scss";
-
 // Блоки
+
+// Базовые блоки
+@use "./components/visually-hidden.scss";
 
 // Общие
 @use "./components/common/page.scss";
@@ -15,12 +15,16 @@
 @use "./components/common/social.scss";
 @use "./components/common/modal-container.scss";
 @use "./components/common/modal.scss";
+@use "./components/common/map.scss";
+@use "./components/common/container.scss";
+
 
 // Блоки шапки
 @use "./components/header/header.scss";
 @use "./components/header/main-nav.scss";
 @use "./components/header/site-list.scss";
 @use "./components/header/user-list.scss";
+@use "./components/header/extra-list.scss";
 // Блоки главной
 @use "./components/main/hero.scss";
 @use "./components/main/categories.scss";
@@ -37,20 +41,3 @@
 // Блоки подвала
 @use "./components/common/footer.scss";
 @use "./components/common/copyright.scss";
-
-// глобальные стили
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.visually-hidden {
-  @include visually-hidden;
-}

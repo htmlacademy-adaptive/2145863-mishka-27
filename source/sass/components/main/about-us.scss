@@ -2,19 +2,67 @@
 
 .about-us {
   padding: 31px 30px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+
+  @media (min-width: $d-width) {
+    padding: 68px 0 28px;
+    margin-bottom: 7px;
+  }
+}
+
+.about-us__title {
+  @media (min-width: $t-width) {
+    width: $t-container;
+    margin: 0 auto;
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: $d-width) {
+    width: 700px;
+    margin-bottom: 41px;
+  }
 }
 
 .about-us__list {
   @include list-reset;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $t-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $d-width) {
+    width: 700px;
+  }
 }
 
+// .about-us__column-1 {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .about-us__column-2 {
+//   display: flex;
+//   flex-direction: column;
+// }
+
 .about-us__item {
-  padding-top: 56px;
-  margin-bottom: 27px;
+  padding-top: 55px;
+  margin-bottom: 28px;
   position: relative;
 
   &--eco {
     background: url("../img/icons/icon-1.svg") no-repeat 8px top;
+
+    @media (min-width: $t-width) {
+      background-position-y: -2px;
+    }
   }
 
   &--price {
@@ -23,6 +71,10 @@
 
   &--likes {
     background: url("../img/icons/icon-5.svg") no-repeat 7px 5px;
+
+    @media (min-width: $d-width) {
+      background-position-y: 7px;
+    }
   }
 
   &--handmade {
@@ -42,12 +94,46 @@
   &--package {
     background: url("../img/icons/icon-6.svg") no-repeat 3px 2px;
   }
+
+  @media (min-width: $t-width) {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 55px;
+  }
 }
 
 .about-us__text {
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 20px;
   letter-spacing: 1.27px;
   margin: 0;
+
+  @media (min-width: $t-width) {
+    letter-spacing: 0;
+  }
+}
+
+
+@media (max-width: $t-width) {
+  .about-us__item--eco {
+    order: 1;
+  }
+
+  .about-us__item--handmade {
+    order: 4;
+  }
+
+  .about-us__item--price {
+    order: 2;
+  }
+
+  .about-us__item--national {
+    order: 5;
+  }
+
+  .about-us__item--likes {
+    order: 3;
+  }
+
+  .about-us__item--package {
+    order: 6;
+  }
 }

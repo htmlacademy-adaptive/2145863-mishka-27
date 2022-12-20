@@ -5,8 +5,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // padding: 15px;
   gap: 1px;
+  padding-top: 4px;
+
+  @media (min-width: $t-width) {
+    justify-content: start;
+    transform: translate(-13px, -2px);
+  }
+
+  @media (min-width: $d-width) {
+    transform: none;
+    margin-left: 49px;
+  }
 }
 
 .social__link {

@@ -1,0 +1,10 @@
+@use "../../global/bootstrap.scss" as *;
+
+.container {
+  margin: 0 auto;
+
+  @media (min-width: $t-width) {
+    margin: 0;
+    background-color: $accent-bg-color;
+  }
+}

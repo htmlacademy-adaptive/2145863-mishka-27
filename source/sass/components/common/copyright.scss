@@ -6,17 +6,30 @@
   justify-content: center;
   gap: 27px;
   min-height: 77px;
+
+  @media (min-width: $t-width) {
+    justify-content: end;
+    transform: translateY(-3px);
+  }
 }
 
 .copyright__text {
   font-size: 19px;
   font-weight: 700;
   line-height: 18px;
+
+  @media (min-width: $d-width) {
+    transform: translate(-3px, 0);
+  }
 }
 
 .copyright__link {
   color: $primary-color;
   transform: translateY(5px);
+
+  @media (min-width: $t-width) {
+    transform: translateY(3px);
+  }
 
   &:hover {
     color: $primary-hover-color;

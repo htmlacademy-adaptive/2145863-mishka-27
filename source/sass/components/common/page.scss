@@ -10,4 +10,9 @@
   background-color: $bg-color;
   margin: 0;
   min-width: $m-width;
+
+  // отладочные ширины (для PP)
+  // max-width: $m-width;   // фиксированный планшет
+  // max-width: $t-width;   // фиксированный планшет
+  // max-width: $d-width;   // фиксированынй десктоп
 }

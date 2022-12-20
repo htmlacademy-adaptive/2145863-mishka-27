@@ -3,6 +3,7 @@ $color: #000000;
 $text-color: #444444;
 $accent-bg-color: #f1f1f1;
 $bg-color: #ffffff;
+$bg-hero: var(--bg-navigation);
 $brand-color: #63d1bb;
 $left-category-btn: $brand-color;
 $right-category-btn: #56c3b2;
@@ -18,6 +19,7 @@ $form-group-border-color: #62d1ba;
 $icon-hover: $form-group-border-color;
 $form-check-mark: $form-group-border-color;
 $form-legend-color: #63d1bb;
+
 // Цвета кнопок
 $btn-color: $text-color;
 $btn-background: trasparent;
@@ -37,8 +39,20 @@ $t-padding: 50px;
 $d-padding: $t-padding;
 
 $m-modal-width: 320px;
+$t-container: $t-width - 2 * $t-padding;
+$d-container: $d-width - 2 * $d-padding;
 
 // Высота шапки
 $m-header-height: 79px;
 $t-header-height: 89px;
 $d-header-height: $t-header-height;
+
+// Размеры для декстопа
+$left: 111px;
+$right: 222px;
+
+// :root {
+//   --mobile: $m-width;
+//   --tablet: 768px;
+//   --desktop: $d-width;
+// }
