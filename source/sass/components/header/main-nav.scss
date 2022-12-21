@@ -2,22 +2,22 @@
 
 .main-nav {
   display: grid;
-  grid-template-rows: $m-header-height;
+  grid-template-rows: $mobile-header-height;
   grid-template-areas: "top";
   font-size: 17px;
   font-weight: 700;
-  min-width: $m-width;
+  min-width: $mobile-width;
   --bg-navigation: #f9f9f9;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     grid-template-columns: 209px 1fr 309px;
-    grid-template-rows: minmax($t-header-height, auto);
+    grid-template-rows: minmax($tablet-header-height, auto);
     grid-template-areas:
       "logo . ."
       ". . delivery";
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 480px 188px 480px 1fr;
     grid-template-areas:
       ". site-list logo user-list ."
@@ -37,11 +37,11 @@
 
   grid-area: top;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     grid-area: logo;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,23 +67,23 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     padding: 0;
     transform: translateY(3px);
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     transform: translateY(3px);
   }
 }
 
 .main-nav__logo-img {
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     width: 113px;
     height: 46px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     width: 149px;
     height: 72px;
   }
@@ -99,10 +99,10 @@
   background: url("../img/menu-close.svg") no-repeat center;
   border: none;
   padding: 5px 2px;
-  margin-right: $m-padding;
+  margin-right: $mobile-padding;
   cursor: pointer;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     display: none;
 
     &:hover {
@@ -128,7 +128,7 @@
   background-color: $bg-color;
   z-index: 1;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     background-color: transparent;
   }
 }
@@ -139,12 +139,12 @@
   &:first-child {
     border-top: 1px solid $stroke-color;
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       border-top: none;
     }
   }
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     border-bottom: none;
   }
 }
@@ -156,7 +156,7 @@
   font-weight: 400;
   text-decoration: none;
   text-align: right;
-  padding-right: $t-padding;
+  padding-right: $tablet-padding;
   padding-top: 20px;
   color: $text-color;
 
@@ -168,13 +168,13 @@
     opacity: 0.3;
   }
 
-  @media (max-width: $t-width) {
+  @media (max-width: $tablet-width) {
     display: none;
   }
 }
 
 // скрывает меню в нормальном состоянии на мобильном
-@media (max-width: $t-width) {
+@media (max-width: $tablet-width) {
   .main-nav--hide .main-nav__list {
     display: none;
   }

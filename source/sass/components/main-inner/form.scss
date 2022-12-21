@@ -6,26 +6,28 @@
   font-weight: 700;
 }
 
-.from__legend-wrapper {
-  min-width: 60px;
+.form__legend-wrapper {
+  // min-width: 60px;
+  min-width: 50px;
+  margin-right: 10px;
 }
 
 .form__wrapper-fullname {
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     padding: 4px 0 0;
   }
 }
 
 .form__wrapper-button {
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 $t-padding;
+    padding: 0 $tablet-padding;
   }
 
-  @media (min-width: $d-width) {
-    width: $d-width;
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
     margin: 0 auto;
     padding: 0 $right 0 $left + 114px;
   }
@@ -36,29 +38,29 @@
   border: none;
   margin: 0;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 25% 75%;
     border: none;
-    padding: 47px $t-padding 50px;
+    padding: 47px $tablet-padding 50px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     padding: 0 $right 50px $left;
     grid-template-columns: 114px 1fr;
-    width: $d-width;
+    width: $desktop-width;
     margin: 0 auto;
   }
 
   &--color {
-    @media (min-width: $t-width) {
-      // width: $t-width;
-      padding: 50px $t-padding;
+    @media (min-width: $tablet-width) {
+      // width: $tablet-width;
+      padding: 50px $tablet-padding;
     }
 
-    @media (min-width: $d-width) {
+    @media (min-width: $desktop-width) {
       padding: 49px 137px 50px $left;
-      width: $d-width;
+      width: $desktop-width;
       margin: 0 auto;
     }
   }
@@ -72,7 +74,7 @@
   flex-basis: 150px;
   display: flex;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     position: static;
     transform: translateY(17px);
   }
@@ -85,7 +87,7 @@
     background-color: $form-legend-color;
     flex-grow: 1;
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       display: none;
     }
   }
@@ -93,7 +95,7 @@
   &--fullname {
     margin-bottom: 29px;
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       transform: translateY(22px);
     }
   }
@@ -106,7 +108,7 @@
   padding: 30px 0 32px;
   gap: 10px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     gap: 24px;
     // padding: 0 160px 54px 170px;
     padding: 0;
@@ -116,7 +118,7 @@
     padding: 24px 0 34px;
     row-gap: 23px;
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       padding: 0;
@@ -124,7 +126,7 @@
       column-gap: 22px;
     }
 
-    @media (min-width: $d-width) {
+    @media (min-width: $desktop-width) {
       grid-template-columns: repeat(3, 233px);
       gap: 22px 30px;
     }
@@ -142,7 +144,7 @@
   cursor: pointer;
   inline-size: fit-content;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     font-size: 19px;
   }
 
@@ -156,14 +158,14 @@
     min-width: 42px;
     height: 42px;
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       min-width: 51px;
       height: 51px;
       margin-right: 26px;
       margin-left: 2px;
     }
 
-    @media (min-width: $d-width) {
+    @media (min-width: $desktop-width) {
       margin-left: 0;
       margin-right: 27px;
     }
@@ -199,14 +201,14 @@
     height: 38px;
     margin-right: 21px;
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       width: 52px;
       height: 52px;
       margin-right: 29px;
       margin-left: 0;
     }
 
-    @media (min-width: $d-width) {
+    @media (min-width: $desktop-width) {
       width: 53px;
       height: 53px;
       transform: translateY(-2px);
@@ -226,7 +228,7 @@
   padding-left: 0;
   min-height: auto;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     padding-right: 26px;
   }
 
@@ -245,7 +247,7 @@
   border-radius: 50%;
   background-color: $form-check-mark;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     width: 20px;
     height: 20px;
     left: 16px;
@@ -253,7 +255,7 @@
 }
 
 .form__input:checked + .form__caption--checkbox::after {
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     width: 32px;
     height: 22px;
     left: 12px;
@@ -263,12 +265,12 @@
 .form__group--fullname {
   margin-bottom: 8px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 0;
     padding-bottom: 28px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     padding-top: 47px;
   }
 }
@@ -278,7 +280,7 @@
   flex-direction: column;
   margin: 0 0 23px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     margin-bottom: 24px;
   }
@@ -286,13 +288,13 @@
   &--bottom {
     margin-bottom: 31px;
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: 25% 75%;
       margin-bottom: 26px;
     }
 
-    @media (min-width: $d-width) {
+    @media (min-width: $desktop-width) {
       grid-template-columns: 114px 1fr;
     }
   }
@@ -300,17 +302,17 @@
   &--text {
     margin-bottom: 11px;
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: 25% 75%;
-      padding: $t-padding;
+      padding: $tablet-padding;
       margin-bottom: 3px;
     }
 
-    @media (min-width: $d-width) {
+    @media (min-width: $desktop-width) {
       margin: 0 auto;
-      width: $d-width;
-      padding: $t-padding 225px 48px $left;
+      width: $desktop-width;
+      padding: $tablet-padding 225px 48px $left;
       grid-template-columns: 114px 1fr;
     }
   }
@@ -327,7 +329,7 @@
   background-color: transparent;
   height: 51px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     font-size: 19px;
     line-height: 18px;
     padding: 12px 17px 12px;
@@ -347,19 +349,19 @@
   }
 
   &--phone {
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       padding: 27px 17px 25px;
     }
   }
 }
 
 .form__group--hidden {
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     display: block;
     padding-bottom: 24px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     padding-top: 47px;
   }
 }
@@ -377,7 +379,7 @@
     height: 1.5px;
     background-color: $form-group-border-color;
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       display: none;
     }
   }
@@ -385,7 +387,7 @@
   &--text {
     margin-bottom: 19px;
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       transform: translateY(-34px);
     }
   }
@@ -413,7 +415,7 @@
   border: 2px solid $color;
   background-color: transparent;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     font-size: 19px;
     padding: 16px;
   }
@@ -439,11 +441,11 @@
   right: 7px;
   opacity: 0.2;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     right: 26px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     right: 12px;
   }
 }
@@ -453,12 +455,12 @@
   transform: translateY(-50%);
   right: 3px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     transform: translateY(-44%);
     right: 22px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     right: 8px;
   }
 }
@@ -488,7 +490,7 @@
 .form__input--radio:checked + .form__caption--radio::before {
   background: radial-gradient($icon-hover 7px, transparent 8px);
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     background: radial-gradient($icon-hover 11px, transparent 12px);
   }
 }
@@ -505,7 +507,7 @@
   border: 2px solid $color;
   border-width: 0 0 2px 2px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     width: 30px;
     height: 16px;
     left: 11px;

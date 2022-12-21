@@ -2,10 +2,10 @@
 
 .header {
 
-  height: $m-header-height;
+  height: $mobile-header-height;
 
-  @media (min-width: $t-width) {
-    // min-height: $t-header-height;
+  @media (min-width: $tablet-width) {
+    // min-height: $tablet-header-height;
     height: auto;
   }
 

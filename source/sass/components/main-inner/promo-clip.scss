@@ -6,13 +6,13 @@
   outline: 1px solid $stroke-color;
   outline-offset: -1px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
     padding: 0 0 43px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 682px 230px;
     grid-template-rows: minmax(171px, auto) minmax(171px, auto);
@@ -37,12 +37,12 @@
   padding-left: 91px;
   padding-bottom: 26px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     padding-left: 106px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     padding: 96px 0 0;
     align-self: start;
   }
@@ -57,12 +57,12 @@
     top: 50%;
     transform: translateY(-114%);
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       left: 41px;
       top: 24px;
     }
 
-    @media (min-width: $d-width) {
+    @media (min-width: $desktop-width) {
       left: 0;
       top: 71px;
     }
@@ -79,12 +79,12 @@
   height: 0;
   padding-bottom: 66.71%;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     order: -1;
     margin-bottom: 41px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     grid-row: 1/4;
     margin-bottom: 0;
   }
@@ -111,13 +111,13 @@
   padding: 0 32px;
   font-size: 13px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     font-size: 15px;
     line-height: 30px;
     padding: 0 39px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     padding: 0;
     margin-bottom: 0;
   }
@@ -155,12 +155,12 @@
 .promo-clip__button {
   margin: 0 34px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     letter-spacing: -0.6px;
     margin: 0 41px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     margin: 0;
     align-self: start;
   }

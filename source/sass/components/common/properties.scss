@@ -4,7 +4,7 @@
   margin: 0;
   line-height: 20px;
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     font-size: 15px;
   }
 }

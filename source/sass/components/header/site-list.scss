@@ -1,34 +1,34 @@
 @use "../../global/bootstrap.scss" as *;
 
 .site-list {
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     grid-column: 1/-1;
     grid-row: 2/3;
     font-size: 15px;
     background-color: $bg-hero;
-    padding: 0 260px 0 $t-padding;
+    padding: 0 260px 0 $tablet-padding;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     position: relative;
     grid-area: site-list;
     align-content: flex-start;
     padding: 0;
-    padding-left: $d-padding - 36px;
+    padding-left: $desktop-padding - 36px;
     font-size: 17px;
     background-color: transparent;
   }
 }
 
 .site-list__item {
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     border-left: 1px solid rgba($color, 0.1);
   }
 
   &--no-border {
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       border: none;
     }
   }
@@ -49,11 +49,11 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     padding: 20px 36px 21px 0;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     padding: 33px 35px 32px 36px;
   }
 }

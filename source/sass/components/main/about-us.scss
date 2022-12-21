@@ -6,20 +6,20 @@
   font-weight: 700;
   line-height: 20px;
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     padding: 68px 0 28px;
     margin-bottom: 7px;
   }
 }
 
 .about-us__title {
-  @media (min-width: $t-width) {
-    width: $t-container;
+  @media (min-width: $tablet-width) {
+    width: $tablet-container;
     margin: 0 auto;
     margin-bottom: 43px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     width: 700px;
     margin-bottom: 41px;
   }
@@ -30,14 +30,14 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 668px;
     margin: 0 auto;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     width: 700px;
   }
 }
@@ -60,7 +60,7 @@
   &--eco {
     background: url("../img/icons/icon-1.svg") no-repeat 8px top;
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       background-position-y: -2px;
     }
   }
@@ -72,7 +72,7 @@
   &--likes {
     background: url("../img/icons/icon-5.svg") no-repeat 7px 5px;
 
-    @media (min-width: $d-width) {
+    @media (min-width: $desktop-width) {
       background-position-y: 7px;
     }
   }
@@ -95,7 +95,7 @@
     background: url("../img/icons/icon-6.svg") no-repeat 3px 2px;
   }
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 22px;
     margin-bottom: 55px;
@@ -106,13 +106,13 @@
   letter-spacing: 1.27px;
   margin: 0;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     letter-spacing: 0;
   }
 }
 
 
-@media (max-width: $t-width) {
+@media (max-width: $tablet-width) {
   .about-us__item--eco {
     order: 1;
   }

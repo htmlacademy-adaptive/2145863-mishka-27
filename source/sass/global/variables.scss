@@ -30,29 +30,27 @@ $btn-active-background: $btn-hover-background;
 $btn-slider-border: #ececec;
 
 // Основноые размеры
-$m-width: 320px;
-$t-width: 768px;
-$d-width: 1150px;
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1150px;
 
-$m-padding: 30px;
-$t-padding: 50px;
-$d-padding: $t-padding;
+$mobile-padding: 30px;
+$tablet-padding: 50px;
+$desktop-padding: $tablet-padding;
 
-$m-modal-width: 320px;
-$t-container: $t-width - 2 * $t-padding;
-$d-container: $d-width - 2 * $d-padding;
+$mobile-modal-width: 320px;
+$tablet-container: $tablet-width - 2 * $tablet-padding;
+$desktop-container: $desktop-width - 2 * $desktop-padding;
 
 // Высота шапки
-$m-header-height: 79px;
-$t-header-height: 89px;
-$d-header-height: $t-header-height;
+$mobile-header-height: 79px;
+$tablet-header-height: 89px;
+$desktop-header-height: $tablet-header-height;
 
 // Размеры для декстопа
 $left: 111px;
 $right: 222px;
 
 // :root {
-//   --mobile: $m-width;
 //   --tablet: 768px;
-//   --desktop: $d-width;
 // }

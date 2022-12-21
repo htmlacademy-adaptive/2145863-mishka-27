@@ -8,15 +8,19 @@
   gap: 1px;
   padding-top: 4px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     justify-content: start;
     transform: translate(-13px, -2px);
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     transform: none;
     margin-left: 49px;
   }
+}
+
+.social__item {
+  display: flex;
 }
 
 .social__link {
