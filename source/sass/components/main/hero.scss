@@ -7,8 +7,8 @@
   // background-size: 568px 373px;
   background-size: 320px 373px;
 
-  @media (min-resolution: 2dppx ) {
-    background-image: url(../img/index/hero-mobile@2x.jpg);
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/hero-mobile@2x.jpg");
   }
 
   @media (min-width: $tablet-width) {

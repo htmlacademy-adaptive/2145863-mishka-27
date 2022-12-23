@@ -2,7 +2,7 @@
 
 .promo-clip {
   margin-bottom: 27px;
-  padding: 22px 0 33px;
+  padding: 24px 0 33px;
   outline: 1px solid $stroke-color;
   outline-offset: -1px;
 
@@ -77,10 +77,11 @@
   // Выделение места под фрейм с учетом сосотношения сторон видео
   // (padding hack)
   height: 0;
-  padding-bottom: 66.71%;
+  padding-bottom: 57.69%;
 
   @media (min-width: $tablet-width) {
     order: -1;
+    padding-bottom: 68.11%;
     margin-bottom: 41px;
   }
 
@@ -115,6 +116,7 @@
     font-size: 15px;
     line-height: 30px;
     padding: 0 39px;
+    margin-bottom: 38px;  
   }
 
   @media (min-width: $desktop-width) {
@@ -134,6 +136,10 @@
 
   &--nojs {
     display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: translate(-50%, -55%);
   }
 }
 
