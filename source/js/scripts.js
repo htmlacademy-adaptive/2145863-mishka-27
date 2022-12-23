@@ -51,7 +51,7 @@ buttonSliderNext?.addEventListener('click', function() {
     currrentSlide = (currrentSlide > sliderItems.length) ? 1 : currrentSlide;
     setSlide(currrentSlide-1);
 });
-  
+
 buttonSliderPrev?.addEventListener('click', function() {
     currrentSlide--;
     currrentSlide = (currrentSlide < 1) ? sliderItems.length : currrentSlide;
