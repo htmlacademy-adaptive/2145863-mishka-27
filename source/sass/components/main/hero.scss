@@ -2,14 +2,24 @@
 
 .hero {
   position: relative;
-  background: url("../img/hero-mobile.jpg") no-repeat center -18px;
+  background: url("../img/index/hero-mobile.jpg") no-repeat center -18px;
   background-color: $hero-bg-color;
-  background-size: 568px 373px;
+  // background-size: 568px 373px;
+  background-size: 320px 373px;
+
+  @media (min-resolution: 2dppx ) {
+    background-image: url(../img/index/hero-mobile@2x.jpg);
+  }
 
   @media (min-width: $tablet-width) {
     min-height: 621px;
-    background: url("../img/hero-tablet.jpg") no-repeat center -67px;
+    background: url("../img/index/hero-tablet.jpg") no-repeat center -67px;
     background-color: $hero-bg-color;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/index/hero-tablet@2x.jpg") no-repeat center -67px;
+      background-size: 768px auto;
+    }
 
     &::after {
       content: "";
@@ -23,9 +33,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    background: url("../img/hero-desktop.jpg") no-repeat center -64px;
+    background: url("../img/index/hero-desktop.jpg") no-repeat center -64px;
     background-color: $hero-bg-color;
     margin-bottom: 59px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/index/hero-desktop@2x.jpg") no-repeat center -67px;
+      background-size: 1150px auto;
+    }
 
     &::after {
       bottom: -7px;

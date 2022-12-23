@@ -28,7 +28,7 @@
 
   @media (min-width: $tablet-width) {
     min-height: 457px;
-    background: url("../img/review.jpg") no-repeat left;
+    background: url("../img/index/review.jpg") no-repeat left;
     display: grid;
     grid-template-columns: 1fr 175px;
     grid-template-rows: 133px;
@@ -37,6 +37,11 @@
       "text   text";
     padding: 0 $tablet-padding 11px;
     margin-bottom: 83px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/review@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
