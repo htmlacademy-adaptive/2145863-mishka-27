@@ -12,7 +12,7 @@
   background-color: $accent-bg-color;
   text-align: center;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     font-size: 43px;
     line-height: 50px;
     padding-top: 35px;
@@ -32,7 +32,7 @@
     }
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     font-size: 53px;
     line-height: 57px;
     padding-top: 39px;
@@ -48,22 +48,22 @@
   &--catalog {
     padding-left: 28px;
 
-    @media (min-width: $d-width) {
+    @media (min-width: $desktop-width) {
       padding-left: 33px;
     }
   }
 }
 
 .main-inner__container {
-  padding: $m-padding;
+  padding: $mobile-padding;
 
-  @media (min-width: $t-width) {
-    padding: 67px $t-padding 37px;
+  @media (min-width: $tablet-width) {
+    padding: 67px $tablet-padding 37px;
   }
 
-  @media (min-width: $d-width) {
-    padding: 112px $d-padding 34px;
-    width: $d-width;
+  @media (min-width: $desktop-width) {
+    padding: 112px $desktop-padding 34px;
+    width: $desktop-width;
     margin: 0 auto;
   }
 }

@@ -1,7 +1,7 @@
 @use "../../global/bootstrap.scss" as *;
 
 .user-list {
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     grid-column: 1/-1;
@@ -13,7 +13,7 @@
     border-bottom: 1px solid rgba($color, 0.1);
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     padding-left: 0;
     padding-right: 52px;
     grid-area: user-list;
@@ -22,7 +22,7 @@
 }
 
 .user-list__item {
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     border-left: 1px solid rgba($color, 0.1);
   }
 }
@@ -30,18 +30,18 @@
 .user-list__link {
   position: relative;
   display: flex;
-  padding: 28px $m-padding 28px 76px;
+  padding: 28px $mobile-padding 28px 76px;
   text-decoration: none;
   color: $color;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     padding: 33px 0 32px 83px;
     min-height: 89px;
   }
 }
 
 .user-list__text--only-mobile {
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
@@ -52,7 +52,7 @@
   top: 31px;
   color: rgba($color, 0.2);
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     top: 35px;
   }
 }

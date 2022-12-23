@@ -1,7 +1,7 @@
 @use "../../global/bootstrap.scss" as *;
 
 .slider {
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 175px;
   }
@@ -10,7 +10,7 @@
 .slider__list {
   @include list-reset;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     grid-column: 1/-1;
     grid-row: 1/2;
   }
@@ -26,13 +26,13 @@
   grid-template-rows: 52px;
   margin-bottom: 38px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     grid-column: 2/3;
     grid-row: 1/2;
     align-self: end;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 48px;
   }
 }

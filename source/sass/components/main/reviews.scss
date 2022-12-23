@@ -1,7 +1,7 @@
 @use "../../global/bootstrap.scss" as *;
 
 .reviews {
-  padding: 0 $m-padding 51px;
+  padding: 0 $mobile-padding 51px;
   position: relative;
 
   &::after {
@@ -13,20 +13,20 @@
     bottom: 0;
     background: url("../img/zigzag-line-desktop.svg");
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       bottom: -83px;
       height: 17px;
       background-size: 772px 17px;
     }
 
-    @media (min-width: $d-width) {
+    @media (min-width: $desktop-width) {
       bottom: -90px;
       height: 23px;
       background-size: 1050px 23px;
     }
   }
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     min-height: 457px;
     background: url("../img/review.jpg") no-repeat left;
     display: grid;
@@ -35,13 +35,13 @@
     grid-template-areas:
       "title  button"
       "text   text";
-    padding: 0 $t-padding 11px;
+    padding: 0 $tablet-padding 11px;
     margin-bottom: 83px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     grid-template-rows: 135px;
-    width: $d-container;
+    width: $desktop-container;
     margin: 0 auto;
     padding: 0 0 50px 175px;
     margin-bottom: 90px;
@@ -51,7 +51,7 @@
 .reviews__title {
   margin-bottom: 14px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     grid-area: title;
     align-self: end;
     margin: 0;
@@ -59,7 +59,7 @@
 }
 
 .reviews__slider {
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     grid-area: text;
   }
 }
@@ -72,12 +72,12 @@
   line-height: 30px;
   margin: 0 0 35px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     margin: 38px 0 61px;
     font-size: 17px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 43px;
   }
 }
@@ -92,11 +92,11 @@
   font-weight: 700;
   font-style: normal;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     font-size: 18px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     font-size: 17px;
   }
 }
@@ -109,18 +109,18 @@
   color: $text-color;
   inline-size: fit-content;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     font-size: 17px;
     line-height: 35px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     line-height: 30px;
   }
 }
 
 .reviews__button-make {
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     grid-area: button;
     align-self: end;
     margin-bottom: 3px;

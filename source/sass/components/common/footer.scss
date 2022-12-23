@@ -4,18 +4,18 @@
   display: grid;
   grid-template-rows: minmax(80px, 1fr);
   background-color: $footer-bg-color;
-  padding: 0 $m-padding;
+  padding: 0 $mobile-padding;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     grid-template-columns: repeat(3, 1fr);
-    padding: 20px $t-padding;
+    padding: 20px $tablet-padding;
     align-items: center;
     min-height: 143px;
   }
 
-  @media (min-width: $d-width) {
-    width: $d-width;
-    padding: 0 $d-padding;
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding: 0 $desktop-padding;
     margin: 0 auto;
   }
 }
@@ -31,7 +31,7 @@
     opacity: 0.3;
   }
 
-  @media (max-width: $t-width) {
+  @media (max-width: $tablet-width) {
     display: none;
   }
 }

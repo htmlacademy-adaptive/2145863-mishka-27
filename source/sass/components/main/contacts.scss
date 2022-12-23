@@ -3,20 +3,20 @@
 .contacts {
   margin-bottom: 39px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
     margin-bottom: 56px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 174px ($d-container - 174 - 527) 527px;
+    grid-template-columns: 174px ($desktop-container - 174 - 527) 527px;
     grid-template-areas:
       ". text   map"
       ". button map";
-    padding: 71px $d-padding 105px;
-    width: $d-width;
+    padding: 71px $desktop-padding 105px;
+    width: $desktop-width;
     margin: 0 auto;
   }
 }
@@ -25,7 +25,7 @@
   position: relative;
 
   &::after {
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       content: "";
       position: absolute;
       background: url("../img/icons/flag.svg");
@@ -35,49 +35,49 @@
       right: 3px;
     }
 
-    @media (min-width: $d-width) {
+    @media (min-width: $desktop-width) {
       left: -111px;
       top: -18px;
     }
   }
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 49px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 35px;
   }
 }
 
 
 .contacts__wrapper {
-  margin: 40px $m-padding 62px $m-padding - 1;
+  margin: 40px $mobile-padding 62px $mobile-padding - 1;
   grid-area: text;
 
-  @media (min-width: $t-width) {
-    padding: 70px $t-padding 0;
+  @media (min-width: $tablet-width) {
+    padding: 70px $tablet-padding 0;
     margin: 0;
     margin-bottom: 49px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     padding: 80px 0 0;
     margin-bottom: 0;
   }
 }
 
 .contacts__feedback {
-  margin: 0 $m-padding;
+  margin: 0 $mobile-padding;
   grid-area: button;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     display: block;
     margin: 0 auto;
     padding: 16px 41px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     justify-self: start;
     align-self: end;
     margin: 0;
@@ -95,14 +95,14 @@
   font-style: normal;
   line-height: 30px;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 78px 1fr 78px 1fr;
     gap: 0;
     font-size: 17px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 75px 1fr;
     row-gap: 30px;
@@ -127,11 +127,11 @@
     bottom: -2px;
     border-bottom: 1px solid $brand-color;
 
-    @media (min-width: $t-width) {
+    @media (min-width: $tablet-width) {
       bottom: -4px;
     }
 
-    @media (min-width: $d-width) {
+    @media (min-width: $desktop-width) {
       bottom: -8px;
     }
   }
@@ -149,11 +149,11 @@
   margin-bottom: 40px;
   grid-area: map;
 
-  @media (min-width: $t-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 57px;
   }
 
-  @media (min-width: $d-width) {
+  @media (min-width: $desktop-width) {
     margin: 0;
   }
 }

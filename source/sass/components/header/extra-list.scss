@@ -1,7 +1,7 @@
 @use "../../global/bootstrap.scss" as *;
 
 .extra-list {
-  @media (max-width: $d-width) {
+  @media (max-width: $desktop-width) {
     display: none;
   }
 
