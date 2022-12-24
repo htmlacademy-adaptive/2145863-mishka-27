@@ -126,9 +126,8 @@
   }
 }
 
-.promo__img {
-  margin: 0 0 26px;
-  width: 100%;
+.promo__picture-wrapper {
+  margin: 0 0 19px;
 
   @media (min-width: $tablet-width) {
     grid-area: image;
@@ -138,6 +137,14 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
+  }
+}
+
+.promo__img {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
   }
 }
 

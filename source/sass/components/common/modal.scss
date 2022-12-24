@@ -8,6 +8,11 @@
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
   padding: 29px 30px 46px;
   background-color: $bg-color;
+
+  @media (min-width: $tablet-width) {
+    width: 566px;
+    padding: 38px 108px 46px;
+  }
 }
 
 .modal__title {

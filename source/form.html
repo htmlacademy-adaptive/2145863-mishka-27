@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <title>Мишка-шалунишка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="img/favicon.png"> <!-- 32х32 -->
+    <link rel="icon" href="img/favicons/favicon.png"> <!-- 32х32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -21,9 +24,9 @@
         <div class="main-nav__logo-wrapper">
           <a class="main-nav__logo" href="index.html">
             <picture>
-              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишка.">
+              <source media="(min-width: 1150px)" width="149" height="72" srcset="img/header/logo-desktop.svg">
+              <source media="(min-width: 768px)" width="113" height="46" srcset="img/header/logo-tablet.svg">
+              <img class="main-nav__logo-img" src="img/header/logo-mobile.svg" width="86" height="35" alt="Логотип Мишка.">
             </picture>
           </a>
         </div>
@@ -75,7 +78,6 @@
 
     <main class="main-inner">
       <h1 class="main-inner__title">Вязание на заказ</h1>
-      <!-- <div class="main-inner__container order"> -->
       <div class="order">
 
         <p class="order__introduction">
