@@ -145,6 +145,7 @@
 
 .promo-clip__img-play {
   display: flex;
+  transition: 0.2s;
 
   &:hover {
     width: 100px * 1.2;

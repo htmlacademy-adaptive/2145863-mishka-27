@@ -23,6 +23,7 @@
 .footer__logo {
   color: $color;
   width: fit-content;
+  transition: 0.2s;
 
   &:hover {
     color: $primary-hover-color;

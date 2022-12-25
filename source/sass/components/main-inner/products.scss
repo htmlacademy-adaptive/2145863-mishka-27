@@ -35,6 +35,7 @@
   margin-bottom: 31px;
   outline: 1px solid $stroke-color;
   outline-offset: -1px;
+  transition: 0.25s;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -63,6 +64,7 @@
 
 .products__link {
   display: block;
+  transition: 0.2s;
 
   &:hover {
     opacity: 0.9;

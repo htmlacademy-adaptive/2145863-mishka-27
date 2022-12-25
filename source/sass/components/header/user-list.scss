@@ -51,10 +51,15 @@
   left: 31px;
   top: 31px;
   color: rgba($color, 0.2);
+  transition: 0.35s;
 
   @media (min-width: $tablet-width) {
     top: 35px;
   }
+}
+
+.user-list__link-text {
+  transition: 0.35s;
 }
 
 .user-list__link:hover .user-list__icon {

@@ -26,6 +26,7 @@
 .social__link {
   padding: 15px 14px;
   color: $social-icon-color;
+  transition: 0.35s;
 
   &:hover {
     color: $social-icon-hover-color;

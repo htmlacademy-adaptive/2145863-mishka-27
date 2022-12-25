@@ -118,6 +118,7 @@
   position: relative;
   text-decoration: none;
   color: $text-color;
+  transition: 0.25s;
 
   &::after {
     position: absolute;
