@@ -58,6 +58,7 @@
   display: flex;
   padding: 5px;
   transform: translateY(4px);
+  transition: 0.2s;
 
   &:hover {
     opacity: 0.6;
@@ -159,6 +160,8 @@
   padding-right: $tablet-padding;
   padding-top: 20px;
   color: $text-color;
+  width: fit-content;
+  margin-left: auto;
 
   &:hover {
     opacity: 0.6;

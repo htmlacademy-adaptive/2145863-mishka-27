@@ -153,6 +153,7 @@
     margin-right: 17px;
     min-width: 42px;
     height: 42px;
+    transition: 0.35s;
 
     @media (min-width: $tablet-width) {
       min-width: 51px;
@@ -308,6 +309,7 @@
   width: 100%;
   background-color: transparent;
   height: 51px;
+  transition: 0.25s;
 
   @media (min-width: $tablet-width) {
     font-size: 19px;
@@ -394,6 +396,7 @@
   line-height: 18px;
   border: 2px solid $color;
   background-color: transparent;
+  transition: 0.25s;
 
   @media (min-width: $tablet-width) {
     font-size: 19px;

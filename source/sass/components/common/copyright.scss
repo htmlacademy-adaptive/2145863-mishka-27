@@ -26,6 +26,7 @@
 .copyright__link {
   color: $primary-color;
   transform: translateY(5px);
+  transition: 0.25s;
 
   @media (min-width: $tablet-width) {
     transform: translateY(3px);

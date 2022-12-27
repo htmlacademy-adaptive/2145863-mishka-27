@@ -14,6 +14,7 @@
   outline-offset: -2px;
   text-decoration: none;
   text-transform: uppercase;
+  transition: 0.2s;
 
   @media (min-width: $tablet-width) {
     letter-spacing: -0.7px;
