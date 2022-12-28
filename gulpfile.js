@@ -7,7 +7,7 @@ import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
 import terser from 'gulp-terser';
-import squoosh from 'gulp-libsquoosh'; 
+import squoosh from 'gulp-libsquoosh';
 // пакет gulp-libsquoosh заменен на gulp-squoosh (проблема с avif на windows, давно не обновляется)
 // https://github.com/GoogleChromeLabs/squoosh/issues/1119
 import squooshCreate from 'gulp-squoosh';
@@ -22,7 +22,7 @@ export const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
     // не дает js упасть при ошибке в стилях (нет нужды запускать каждый раз npm start)
     .pipe(plumber())
-    .pipe(sass().on('error', sass.logError))    
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -87,7 +87,7 @@ const svg = () => {
 
 const sprite = () => {
   return gulp.src('source/img/sprite-icons/**/*.svg')
-    .pipe(svgo())  
+    .pipe(svgo())
     .pipe(svgstore({
       inlineSvg: true
     }))
