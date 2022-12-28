@@ -21,6 +21,10 @@ const sliderItems = document.querySelectorAll('.slider__item');
 const buttonSliderNext = document.querySelector('.slider__button--next');
 const buttonSliderPrev = document.querySelector('.slider__button--prev');
 
+// обертка фолбека карты
+const mapWprapper = document.querySelector('.contacts__map-wpapper');
+
+
 // Обработчик гамбургера меню
 function onMenuTogglerClick() {
     mainNav.classList.toggle('main-nav--hide');
@@ -68,7 +72,9 @@ function setSlide(slideNumber) {
             sliderItems[i].classList.remove('slider__item--hide')
         }
     }
-}
+};
+
+mapWprapper?.classList.remove('contacts__map-wpapper--no-js');
 
 // Яндекс карта
 

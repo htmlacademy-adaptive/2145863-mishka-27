@@ -7,10 +7,10 @@ import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
 import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh'; 
 // пакет gulp-libsquoosh заменен на gulp-squoosh (проблема с avif на windows, давно не обновляется)
 // https://github.com/GoogleChromeLabs/squoosh/issues/1119
-// import squoosh from 'gulp-libsquoosh'; 
-import squoosh from 'gulp-squoosh';
+import squooshCreate from 'gulp-squoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
@@ -53,10 +53,14 @@ const scripts = () => {
 
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
-    .pipe(squoosh({
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'))
+}
+
+const createImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(squooshCreate({
       encodeOptions: {
-        oxipng: {},
-        mozjpeg: {},
         webp: {},
         avif: {},
       }
@@ -117,6 +121,7 @@ const server = (done) => {
   browser.init({
     server: {
       baseDir: 'build'
+      // baseDir: 'source'
     },
     cors: true,
     notify: false,
@@ -145,6 +150,7 @@ export const build = gulp.series(
   gulp.parallel(
     copy,
     optimizeImages,
+    createImages,
     styles,
     html,
     scripts,
