@@ -158,6 +158,14 @@
   }
 }
 
+.contacts__map-wpapper {
+  display: none;
+
+  &--no-js {
+    display: block;
+  }
+}
+
 .contacts__map-image {
   display: block;
   margin: 0 auto;
