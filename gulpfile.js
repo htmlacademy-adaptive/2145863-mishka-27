@@ -7,16 +7,13 @@ import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
 import terser from 'gulp-terser';
-import squoosh from 'gulp-libsquoosh';
-// пакет gulp-libsquoosh заменен на gulp-squoosh (проблема с avif на windows, давно не обновляется)
-// https://github.com/GoogleChromeLabs/squoosh/issues/1119
+// import squoosh from 'gulp-libsquoosh';
+import imagemin from 'gulp-imagemin';
 import squooshCreate from 'gulp-squoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
-
-// Styles
 
 export const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
@@ -32,15 +29,11 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
-// HTML
-
 const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
-
-// Scripts
 
 const scripts = () => {
   return gulp.src('source/js/*.js')
@@ -49,11 +42,10 @@ const scripts = () => {
     .pipe(browser.stream())
 }
 
-// Images
-
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
-    .pipe(squoosh())
+    // .pipe(squoosh())
+    .pipe(imagemin())
     .pipe(gulp.dest('build/img'))
 }
 
@@ -68,14 +60,10 @@ const createImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-// Copy images
-
 const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(gulp.dest('build/img'))
 }
-
-// SVG
 
 const svg = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/sprite-icons/*'])
@@ -83,7 +71,7 @@ const svg = () => {
     .pipe(gulp.dest('build/img'));
 }
 
-// SVG Sprite
+// Create SVG Sprite
 
 const sprite = () => {
   return gulp.src('source/img/sprite-icons/**/*.svg')
@@ -94,8 +82,6 @@ const sprite = () => {
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'))
 }
-
-// Copy
 
 const copy = (done) => {
   gulp.src([
@@ -109,19 +95,14 @@ const copy = (done) => {
   done();
 }
 
-// Clean build
-
 const clean = () => {
   return del('build')
 }
-
-// Server
 
 const server = (done) => {
   browser.init({
     server: {
       baseDir: 'build'
-      // baseDir: 'source'
     },
     cors: true,
     notify: false,
@@ -130,14 +111,10 @@ const server = (done) => {
   done();
 }
 
-// Reload
-
 const reload = (done) => {
   browser.reload();
   done();
 }
-
-// Watcher
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
@@ -163,8 +140,8 @@ export default gulp.series(
   clean,
   gulp.parallel(
     copy,
-    // оптимизация и создание webp и avif реализовано в build (операция занимает около минуты)
     copyImages,
+    createImages,
     styles,
     html,
     scripts,
