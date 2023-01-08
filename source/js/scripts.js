@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 // Объкты работы с меню
 const menuToggle = document.querySelector('.main-nav__toggle');
@@ -30,6 +30,8 @@ function onMenuTogglerClick() {
     mainNav.classList.toggle('main-nav--hide');
 }
 
+// *** Модальное окно
+
 // Обработчик открытия модального окна заказа
 function onOrderButtonClick(evt) {
     evt.preventDefault();
@@ -42,6 +44,13 @@ buttonPromoOrder?.addEventListener('click', onOrderButtonClick);
 productsBuy?.forEach(element => {
     element.addEventListener('click', onOrderButtonClick);
 });
+
+// Закрытие модального окна
+modal?.addEventListener('click', (evt) => {
+    if (evt.target === modal)
+        modal.classList.toggle('modal-container--hide');
+});
+
 
 // Навигационное меню
 menuToggle.addEventListener('click', onMenuTogglerClick);
@@ -114,6 +123,7 @@ if (document.getElementById('map')) {
     ymaps.ready(init);
 }
 
+// Промо видео
 if (video) {
 
     // id - видеоролика на youtube
