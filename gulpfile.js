@@ -7,7 +7,6 @@ import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
 import terser from 'gulp-terser';
-// import squoosh from 'gulp-libsquoosh';
 import imagemin from 'gulp-imagemin';
 import squooshCreate from 'gulp-squoosh';
 import svgo from 'gulp-svgmin';
@@ -35,7 +34,7 @@ const html = () => {
     .pipe(gulp.dest('build'));
 }
 
-const scripts = () => {
+export const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
@@ -96,7 +95,7 @@ const copy = (done) => {
 }
 
 const clean = () => {
-  return del('build')
+  return del('build');
 }
 
 const server = (done) => {
