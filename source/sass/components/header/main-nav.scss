@@ -70,7 +70,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    transform: translateY(3px);
+    transform: translateY(3px) translateX(1px);
   }
 
   @media (min-width: $desktop-width) {
