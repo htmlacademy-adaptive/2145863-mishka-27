@@ -4,9 +4,10 @@
   <head>
     <meta charset="utf-8">
     <title>Мишка-шалунишка</title>
-    <link rel="preload" href="fonts/opensans.woff2" as="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/opensansbold.woff2" as="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="css/style.min.css" as="style" crossorigin="anonymous">
+    <link rel="preload" href="js/scripts.js" as="script" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/favicons/favicon.png"> <!-- 32х32 -->
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
@@ -267,7 +268,7 @@
               <source type="image/webp" srcset="img/index/map-mobile.webp 1x, img/index/map-mobile@2x.webp 2x" width="260" height="315">
               <source media="(min-width: 1150px)" srcset="img/index/map-desktop.jpg 1x, img/index/map-desktop@2x.jpg 2x" width="527" height="457">
               <source media="(min-width: 768px)" srcset="img/index/map-tablet.jpg 1x, img/index/map-tablet@2x.jpg 2x" width="768" height="457">
-              <img class="contacts__map-image" loading="lazy" src="img/index/map-mobile.jpg" srcset="img/index/map-mobile@2x.jpg 2x" width="320" heingt="454" alt="Наше месторасположение на карте.">
+              <img class="contacts__map-image" loading="lazy" src="img/index/map-mobile.jpg" srcset="img/index/map-mobile@2x.jpg 2x" width="320" height="454" alt="Наше месторасположение на карте.">
             </picture>
           </div>
           <span class="visually-hidden">Наше расположение на карте</span>
@@ -351,7 +352,7 @@
     </div>
 
     <!-- карта -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=5c958126-2368-4c1a-90ea-a85cdc1b352c&lang=ru_RU" type="text/javascript"></script>
     <script src="js/scripts.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=5c958126-2368-4c1a-90ea-a85cdc1b352c&lang=ru_RU" type="text/javascript"></script>    
   </body>
 </html>
