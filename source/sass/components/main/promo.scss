@@ -76,7 +76,7 @@
 
   @media (min-width: $desktop-width) {
     grid-area: title;
-    margin: 69px 42px 0 0;
+    margin: 69px 44px 0 0;
   }
 }
 
@@ -166,6 +166,10 @@
     line-height: 24px;
     transform: translate(-2px);
     margin: 0 0 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: none;
   }
 }
 
