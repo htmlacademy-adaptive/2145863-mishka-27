@@ -16,7 +16,7 @@
   }
 }
 
-.product__desc-wrappper {
+.products__desc-wrappper {
   padding: 28px 26px 24px 28px;
 
   @media (min-width: $tablet-width) {
@@ -132,7 +132,7 @@
   }
 }
 
-.product__footer {
+.products__footer {
   display: flex;
   border-top: 1px solid $stroke-color;
 }
