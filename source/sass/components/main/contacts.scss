@@ -145,7 +145,8 @@
 .contacts__map {
   height: 455px;
   width: 100%;
-  background-color: $footer-bg-color;
+  // расскомментировать если требуется подкрасить серым
+  // background-color: $footer-bg-color;
   margin-bottom: 40px;
   grid-area: map;
 
