@@ -93,11 +93,11 @@
 }
 
 .about-us__text {
-  letter-spacing: 1.27px;
+  font-size: 17px;
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    letter-spacing: 0;
+    font-size: 20px;
   }
 }
 
