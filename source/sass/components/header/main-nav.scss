@@ -162,6 +162,7 @@
   color: $text-color;
   width: fit-content;
   margin-left: auto;
+  display: none;
 
   &:hover {
     opacity: 0.6;
@@ -171,13 +172,13 @@
     opacity: 0.3;
   }
 
-  @media (max-width: $tablet-width) {
-    display: none;
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }
 
 // скрывает меню в нормальном состоянии на мобильном
-@media (max-width: $tablet-width) {
+@media (max-width: $tablet-width - 0.25px) {
   .main-nav--hide .main-nav__list {
     display: none;
   }

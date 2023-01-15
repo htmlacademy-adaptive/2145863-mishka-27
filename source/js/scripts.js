@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // Объкты работы с меню
 const menuToggle = document.querySelector('.main-nav__toggle');
@@ -92,7 +92,7 @@ mapWprapper?.classList.remove('contacts__map-wpapper--no-js');
 
 function init(){
     // Создание карты.
-    var myMap = new ymaps.Map("map", {
+    var myMap = new ymaps.Map('map', {
         // Координаты центра карты.
         center: [59.938735, 30.322958],
         // от 0 (весь мир) до 19.

@@ -93,16 +93,16 @@
 }
 
 .about-us__text {
-  letter-spacing: 1.27px;
+  font-size: 17px;
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    letter-spacing: 0;
+    font-size: 20px;
   }
 }
 
 
-@media (max-width: $tablet-width) {
+@media (max-width: $tablet-width - 0.25px) {
   .about-us__item--eco {
     order: 1;
   }

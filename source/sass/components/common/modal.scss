@@ -3,7 +3,7 @@
 .modal {
   margin: auto;
   width: $mobile-modal-width;
-  height: 336px;
+  min-height: 336px;
   border: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
   padding: 29px 30px 46px;
@@ -11,18 +11,32 @@
 
   @media (min-width: $tablet-width) {
     width: 566px;
-    padding: 38px 108px 46px;
+    padding: 38px 92px 46px;
   }
 }
 
 .modal__title {
   font-size: 25px;
   font-weight: 700;
-  line-height: 31px;
-  margin: 0 0 15px;
+  line-height: 30px;
+  margin: 0 30px 15px 55px;
   text-transform: uppercase;
-  text-align: center;
   transform: translateX(3px);
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 57px;
+    text-align: center;
+    margin: 0 0 12px;
+    transform: translateX(-1px);
+  }
+}
+
+.modal__content {
+  @media (min-width: $tablet-width) {
+    padding: 0 16px 0;
+  }
 }
 
 .modal__group {
@@ -33,7 +47,13 @@
 
 .modal__legend {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
+  line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    margin-bottom: 18px;
+  }
 }
 
 .modal__group-wrapper {
