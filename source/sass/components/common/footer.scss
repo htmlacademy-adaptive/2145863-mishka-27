@@ -33,7 +33,7 @@
     opacity: 0.3;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $tablet-width - 0.25px) {
     display: none;
   }
 }
