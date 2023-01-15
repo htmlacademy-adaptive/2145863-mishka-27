@@ -102,7 +102,7 @@
 }
 
 
-@media (max-width: $tablet-width) {
+@media (max-width: $tablet-width - 0.25px) {
   .about-us__item--eco {
     order: 1;
   }
