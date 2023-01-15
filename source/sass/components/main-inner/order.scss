@@ -15,11 +15,13 @@
 .order__introduction {
   font-size: 13px;
   margin: 0 0 29px;
+  min-height: 96px;
 
   @media (min-width: $tablet-width) {
     font-size: 17px;
     line-height: 30px;
     margin: 0 $tablet-padding 17px;
+    min-height: auto;
   }
 
   @media (min-width: $desktop-width) {
